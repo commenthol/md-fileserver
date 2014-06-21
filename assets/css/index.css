@@ -1,0 +1,50 @@
+html {
+  background: #eee;
+}
+body {
+  max-width: 800px;
+  margin-left: 10px;
+  background: #fff;
+  padding: 1em;
+}
+img {
+  max-width: 100%;
+}
+a.top {
+  float: right;
+  margin-right: 10px;
+  text-decoration: none;
+  color: #ccc;
+}
+.markdown-body table {
+  border-collapse: collapse;
+}
+.markdown-body pre code {
+  white-space: pre-wrap;
+}
+.markdown-body {
+  font-size: 1em;
+  line-height: 1.2;
+  word-wrap: break-word;
+}
+.markdown-body pre {
+  margin: 0 0;
+}
+x-toc li {
+  list-style: none outside none;
+}
+x-error {
+  background: none repeat scroll 0 0 #f00;
+  color: #fff;
+  display: block;
+  font-weight: bold;
+  padding: 0.5em;
+  text-align: center;
+  width: 100%;
+}
+x-note {
+  display: block;
+  padding: 0.5em;
+  background-color: #ff6;
+  box-shadow: 0px 0px 5px 2px #ff0
+}

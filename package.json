@@ -1,0 +1,31 @@
+{
+  "name": "markdown-fileserver",
+  "version": "0.0.1",
+  "description": "local fileserver with markdown to html conversion",
+  "main": "index.js",
+  "bin": {
+    "mdopen": "./bin/mdopen.js",
+    "mdstart": "./bin/mdstart.js"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "express": "^4.4.3",
+    "highlight.js": "^8.0.0",
+    "marked": "^0.3.2",
+    "lodash": "^2.4.1",
+    "serve-index": "^1.1.2",
+    "serve-static": "^1.2.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "preinstall": "npm install modules/highlight.js-*.tgz",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "markdown"
+  ],
+  "author": "commenthol",
+  "license": "MIT"
+}
