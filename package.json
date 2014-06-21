@@ -20,11 +20,11 @@
   },
   "devDependencies": {},
   "scripts": {
-    "preinstall": "npm install modules/highlight.js-*.tgz",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "markdown"
+    "markdown",
+    "fileserver"
   ],
   "author": "commenthol",
   "license": "MIT"

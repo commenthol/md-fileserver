@@ -5,16 +5,21 @@ var config = {
   port: 4000,
   /// grant access only to $HOME
   home: process.env.HOME,
-  /// options for `marked`
-  browser: 'firefox',
+  /// browser settings per platform
+  browser: {
+    darwin: 'open', 
+    linux: 'firefox',
+    win32: 'firefox.exe'
+  },
+  /// options for `marked` see https://github.com/chjj/marked
   marked: {
     gfm: true,
     tables: true,
-    breaks: true,
+    breaks: false,
     pedantic: false,
     sanitize: false,
     smartLists: true,
-    langPrefix: ''
+    smartypants: false
   },
   /// template settings
   template: {

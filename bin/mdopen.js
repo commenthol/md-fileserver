@@ -7,12 +7,17 @@ var
 
 var 
   file = process.argv[2],
-  pwd = process.env.PWD;
+  browserExe = config.browser[process.platform];
 
-if (file && pwd) { 
-  file = 'http://localhost:' + config.port + path.resolve( pwd, file );
-  spawn(config.browser, [ file ]);
+if (file && browserExe) { 
+  file = 'http://localhost:' + config.port + path.resolve( process.cwd(), file );
+  spawn(browserExe, [ file ]);
 }
 else {
-  console.log('TODO -- help');
+  console.log('\
+Usage: mdopen <file>\n\
+\n\
+Make sure that the "markdown-server" is running.\n\
+Otherwise start it with `mdstart`.\n\
+');
 }

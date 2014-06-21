@@ -19,7 +19,8 @@ app.use('/js/', mw.serveStatic(config.template.assets + config.template.js))
   .use(mw.error);
 
 // all other files under `config.home`
-app.use(config.home, mw.forbiddenRemote)
+app.use(mw.forbiddenRemote)
+  .use(mw.forbiddenNotHome)
   .use(mw.markdown)
   .use(mw.serveIndex)
   .use(mw.serveStatic('/'))
