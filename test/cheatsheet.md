@@ -73,7 +73,7 @@ h2 Alternate
 
 ```
 A paragraph is a paragraph is a paragraph is a paragraph is a paragraph. Is a paragraph is a paragraph is a paragraph is a paragraph is a paragraph. Is a paragraph is a paragraph is a paragraph.
-This is a not a new line. 
+This is a not a new line.
 This as not as well..
 
 This is a new paragraph.
@@ -82,7 +82,7 @@ Forcing a new line with `<br>` <br> causes a new line.
 ```
 
 A paragraph is a paragraph is a paragraph is a paragraph is a paragraph. Is a paragraph is a paragraph is a paragraph is a paragraph is a paragraph. Is a paragraph is a paragraph is a paragraph.
-This is a not a new line. 
+This is a not a new line.
 This as not as well..
 
 This is a new paragraph.
@@ -269,6 +269,8 @@ Wi*thin*Words   - but not -   Wi_thin_Words
 ```
 http://example.com
 
+<http://example.com>
+
 [Linktext](http://example.com)
 
 [Reference][Referenced Link]
@@ -277,6 +279,8 @@ http://example.com
 ```
 
 http://example.com
+
+<http://example.com>
 
 [Linktext](http://example.com)
 
@@ -299,7 +303,7 @@ http://example.com
 ## Block Quotes
 
 ```
-> Block Quoted Text 
+> Block Quoted Text
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
 
 > Or line
@@ -307,13 +311,13 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi p
 
 You need "text" to break block quotes
 
-> Or with a 
+> Or with a
 > > nested quote
 
 > line
 ```
 
-> Block Quoted Text 
+> Block Quoted Text
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
 
 > Or line
@@ -321,7 +325,7 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi p
 
 You need "text" to break block quotes
 
-> Or with a 
+> Or with a
 > > nested quote
 
 > line
@@ -361,7 +365,7 @@ ___
 <img src="path_to/img.png" title="Optional Title" alt="Alt Text" style="width: 50px;">
 
 
-## Code 
+## Code
 
     `a line of code`
 
@@ -423,10 +427,12 @@ outputs:
 
 ## Include other files
 
-\!INCLUDE "path_to/include.md"
+__Syntax:__
 
-!INCLUDE "path_to/include.md"
+\!INCLUDE (path_to/include.md)
+
+!INCLUDE (path_to/include.md)
 
 
 [Markdown Spec]: http://daringfireball.net/projects/markdown/syntax
-[Github Flavored Markdown]: https://help.github.com/articles/github-flavored-markdown 
+[Github Flavored Markdown]: https://help.github.com/articles/github-flavored-markdown

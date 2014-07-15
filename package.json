@@ -1,6 +1,6 @@
 {
   "name": "markdown-fileserver",
-  "version": "0.0.2",
+  "version": "0.0.2-1",
   "description": "local fileserver with markdown to html conversion",
   "main": "index.js",
   "bin": {
