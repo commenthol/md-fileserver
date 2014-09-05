@@ -1,9 +1,9 @@
-# Markdown with GFM - Cheatsheet
+# Cheatsheet - Markdown Syntax with GFM
 
-This cheatsheet uses markdown based on:
+This cheatsheet uses markdown syntax based on:
 
-* [Markdown Specification][Markdown Spec]
-* [Github Flavored Markdown][Github Flavored Markdown]
+* [Markdown Specification][]
+* [Github Flavored Markdown][]
 
 ## Table of Contents
 
@@ -249,6 +249,7 @@ Wi*thin*Words   - but not -   Wi_thin_Words
 | Row 1    | 1        | 2        |
 | Row 2    | 3        | 4        |
 
+
 ### Column Alignment
 
 ```
@@ -275,6 +276,8 @@ http://example.com
 
 [Reference][Referenced Link]
 
+[Referenced Link][]
+
 [Referenced Link]: http://example.com
 ```
 
@@ -284,9 +287,12 @@ http://example.com
 
 [Linktext](http://example.com)
 
-[Reference][Referencelink]
+[Reference][Referenced Link]
 
-[Referencelink]: http://example.com
+[Referenced Link][]
+
+[Referenced Link]: http://example.com
+
 
 ### Link within document
 
@@ -339,8 +345,8 @@ Three or more Hyphens, Asterisks, Underscores
 ---
 
 ***
-
 ___
+
 ```
 
 ---
@@ -425,14 +431,40 @@ outputs:
 
 # Preprocessor
 
+Check [markedpp][] for further options.
+
 ## Include other files
 
 __Syntax:__
 
-\!INCLUDE (path_to/include.md)
+```
+!include (path_to/include.md)
+```
 
-!INCLUDE (path_to/include.md)
+!include (path_to/include.md)
+
+## Table of Contents
+
+__Syntax:__
+
+```
+!toc
+```
+
+!toc
+
+## Reference list
+
+__Syntax:__
+
+```
+!ref
+```
+
+!ref
 
 
-[Markdown Spec]: http://daringfireball.net/projects/markdown/syntax
+
+[Markdown Specification]: http://daringfireball.net/projects/markdown/syntax
 [Github Flavored Markdown]: https://help.github.com/articles/github-flavored-markdown
+[markedpp]: https://github.com/commenthol/markedpp

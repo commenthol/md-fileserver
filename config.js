@@ -11,6 +11,14 @@ var config = {
     linux: 'firefox',
     win32: 'firefox.exe'
   },
+  /// options for `markedpp` see https://github.com/commenthol/markedpp
+  markedpp: {
+    gfm: true,    // consider gfm fences
+    breaks: true, // render <br> tags for Table of Contents with numbered style
+    tags: true,   // render pre-proc tags <!-- !command -->
+    level: 3,     // default level for !toc and !numberheadings
+    minlevel: 1   // default minlevel for !toc and !numberheadings
+  },
   /// options for `marked` see https://github.com/chjj/marked
   marked: {
     gfm: true,

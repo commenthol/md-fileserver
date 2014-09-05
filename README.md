@@ -1,20 +1,22 @@
-# markdown-fileserver
+# md-fileserver
 
-Locally view your markdown files in a browser.
+> Locally view markdown files in a browser.
+
+![NPM version](https://badge.fury.io/js/md-fileserver.png)
 
 Starts a local server to render "markdown" files within your browser:
 
 * Runs on `localhost:4000`
-* Supports [markdown](http://daringfireball.net/projects/markdown/syntax) with [Github Flavoured Markdown](https://help.github.com/articles/github-flavored-markdown).
-* Supports syntax highlighting using [highlight.js](http://highlightjs.org)
-* For supported Markdown see [Cheatsheet](#cheatsheet)
+* Supports [Markdown Syntax][] with [GFM][].
+* Based on [marked][].
+* Includes [markedpp][] as preprocessor.
+* Supports syntax highlighting using [highlight.js][]
+* For supported markdown Syntax see [Cheatsheet][].
 
 ## Installation
 
 ```bash
-git clone ...
-cd markdown-fileserver
-npm install -g
+npm install -g md-fileserver
 ```
 
 ## Start the Local Server
@@ -39,8 +41,18 @@ mdopen <file>
 mdopen test/cheatsheet.md
 ```
 
-[Cheatsheet](test/cheatsheet.md)
+[Cheatsheet][]
 
 ## LICENSE
 
-Software is released under [MIT](./LICENSE).
+Software is released under [MIT License][].
+
+
+
+[Cheatsheet]: test/cheatsheet.md
+[GFM]: https://help.github.com/articles/github-flavored-markdown
+[highlight.js]: http://highlightjs.org
+[marked]: https://github.com/chjj/marked
+[markedpp]: https://github.com/commenthol/markedpp
+[Markdown Syntax]: http://daringfireball.net/projects/markdown/syntax
+[MIT License]: ./LICENSE
