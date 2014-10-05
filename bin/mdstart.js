@@ -3,6 +3,6 @@
 var config = require('../config');
 
 if (require.main === module) {
-  console.log('md-fileserver started on 127.0.0.1 port ' + config.port);
+  console.log('"md-fileserver" started. Open http://localhost:' + config.port + ' in browser.');
   require('../lib').listen(config.port);
 }

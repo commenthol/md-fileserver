@@ -1,21 +1,21 @@
 {
   "name": "md-fileserver",
-  "version": "0.1.1",
+  "version": "0.1.3",
   "description": "Locally view markdown files in a browser",
   "main": "index.js",
   "bin": {
     "mdopen": "./bin/mdopen.js",
     "mdstart": "./bin/mdstart.js"
   },
-  "repository" : {
-    "type" : "git",
-    "url" : "https://github.com/commenthol/md-fileserver.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/commenthol/md-fileserver.git"
   },
   "homepage": "https://github.com/commenthol/md-fileserver",
   "bugs": {
     "url": "http://github.com/commenthol/md-fileserver/issues"
   },
- "directories": {
+  "directories": {
     "test": "test"
   },
   "dependencies": {
@@ -30,7 +30,9 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "markedpp": "markedpp README.md > o.md && mv o.md README.md",
+    "jshint": "find . -iname \"*.js\" | grep -v \"node_modules\" | xargs jshint"
   },
   "keywords": [
     "markdown",

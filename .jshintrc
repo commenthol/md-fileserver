@@ -1,4 +1,5 @@
 {
 	"node": true,
-	"multistr": true
+	"multistr": true,
+	"-W030": true
 }

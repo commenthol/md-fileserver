@@ -1,3 +1,4 @@
 md-fileserver-*.tgz
 .jshintrc
 .npmignore
+tmp/

@@ -17,6 +17,6 @@ else {
   console.log('\
 Usage: mdopen <file>\n\
 \n\
-Make sure that the "markdown-server" is running.\n\
+Make sure that the "md-fileserver" is running.\n\
 Otherwise start it with `mdstart`.\n');
 }

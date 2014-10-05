@@ -11,6 +11,8 @@ var config = {
     linux: 'firefox',
     win32: 'firefox.exe'
   },
+  /// filter only markdown files
+  filter: true,
   /// options for `markedpp` see https://github.com/commenthol/markedpp
   markedpp: {
     gfm: true,    // consider gfm fences

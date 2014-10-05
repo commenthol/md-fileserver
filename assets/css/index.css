@@ -3,7 +3,7 @@ html {
 }
 body {
   max-width: 800px;
-  margin-left: 10px;
+  margin: 0 auto;
   background: #fff;
   padding: 1em;
 }
