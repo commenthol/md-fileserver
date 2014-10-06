@@ -10,3 +10,5 @@
   * [ ] enable config changes via server
 
 * fixes
+  * [x] allow websocket connections from multiple browsers
+  * [x] disconnect websocket connections if closed
