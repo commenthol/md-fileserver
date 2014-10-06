@@ -2,3 +2,4 @@ md-fileserver-*.tgz
 .jshintrc
 .npmignore
 tmp/
+TODO.md
