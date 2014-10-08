@@ -86,7 +86,7 @@ all code is your original work.
 
 ## License
 
-Copyright (c) 2014 commenthol
+Copyright (c) 2014 commenthol   
 Software is released under [MIT License][].
 
 ## References
