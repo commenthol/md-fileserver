@@ -5,13 +5,16 @@ var
 	spawn = require('child_process').spawn,
 	config = require('../config');
 
-var 
+var args;
 	file = process.argv[2],
 	browserExe = config.browser[process.platform];
 
 if (file && browserExe) { 
-	file = 'http://localhost:' + config.port + path.resolve( process.cwd(), file );
-	spawn(browserExe, [ file ]);
+	file = 'http://' + config.host + ':' + config.port + path.resolve( process.cwd(), file );
+	args = browserExe.split(/ +/);
+	args.push(file);
+	browserExe = args.shift();
+	spawn(browserExe, args);
 }
 else {
 	console.log('\

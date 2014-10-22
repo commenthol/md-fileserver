@@ -12,7 +12,7 @@ Starts a local server to render "markdown" files within your browser:
 * Includes [markedpp][] as preprocessor.
 * Supports syntax highlighting using [highlight.js][]
 * For supported markdown Syntax see [Cheatsheet][].
-* Automatic update in browser after saving edited file.
+* Automatic update in browser after saving edited file. (Tested on Linux, MacOSX)
 
 ## Table of Contents
 
@@ -33,7 +33,7 @@ Starts a local server to render "markdown" files within your browser:
 ## Installation
 
 ```bash
-npm install -g md-fileserver
+npm install -gf md-fileserver
 ```
 
 ## Usage

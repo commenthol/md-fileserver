@@ -13,3 +13,4 @@
   * [x] allow websocket connections from multiple browsers
   * [x] disconnect websocket connections if closed
   * [x] autoreconnect browser websocket connection
+  * [x] watchFile not working on OSX

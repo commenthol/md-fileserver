@@ -1,17 +1,23 @@
 'use strict';
 
 var config = {
+	/// host
+	//host: '127.0.0.1',
+	host: 'localhost',
 	/// port for server
 	port: 4000,
 	/// grant access only to $HOME
 	home: process.env.HOME,
 	/// browser settings per platform
 	browser: {
-		darwin: 'open',
-		linux: 'firefox',
+		darwin: 'open',          // Default browser 
+		//darwin: 'open -a Safari',  // Safari
+		//darwin: 'open -a Firefox', // Firefox
+		linux: 'x-www-browser',  // Default browser use `sudo update-alternatives --config x-www-browser` to change
+		//linux: 'firefox',
 		win32: 'firefox.exe'
 	},
-	/// filter only markdown files
+	/// show only markdown files in browser folder view
 	filter: true,
 	/// options for `markedpp` see https://github.com/commenthol/markedpp
 	markedpp: {
