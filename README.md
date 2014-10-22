@@ -33,7 +33,7 @@ Starts a local server to render "markdown" files within your browser:
 ## Installation
 
 ```bash
-npm install -gf md-fileserver
+npm install -g md-fileserver
 ```
 
 ## Usage

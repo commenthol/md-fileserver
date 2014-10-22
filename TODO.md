@@ -3,7 +3,7 @@
 * features
   * [x] only show markdown files in Index
   * [x] auto update on file changes (using websockets)
-  * [ ] autoupdate port in `reload.js`
+  * [x] autoupdate port in `reload.js`
   * [ ] write pid file of server
   * [ ] allow stoping the server with `mdstart --stop`
   * [ ] nicer css template(s)
@@ -14,3 +14,4 @@
   * [x] disconnect websocket connections if closed
   * [x] autoreconnect browser websocket connection
   * [x] watchFile not working on OSX
+  * [x] fix problems with URI encoding

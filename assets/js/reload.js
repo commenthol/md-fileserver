@@ -9,10 +9,12 @@
 	}
 
 	function createConnection() {
-		var connection = new WebSocket('ws://127.0.0.1:4000');
+		var connection = new WebSocket('ws://<%= hostname %>');
 
 		connection.onmessage = function (message) {
-			if (message.data === location.pathname) {
+			console.log(decodeURIComponent(message.data));			
+			console.log(decodeURIComponent(location.pathname));
+			if (decodeURIComponent(message.data) === decodeURIComponent(location.pathname)) {
 				location.reload();
 			}
 		};
