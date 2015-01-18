@@ -1,5 +1,6 @@
-md-fileserver-*.tgz
-.jshintrc
-.npmignore
-tmp/
+/node_modules
+/tmp
+.*
+*.log
+*.tgz
 TODO.md

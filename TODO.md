@@ -1,6 +1,7 @@
 # TODO
 
 * features
+  * [x] automatically start server with mdopen
   * [x] only show markdown files in Index
   * [x] auto update on file changes (using websockets)
   * [x] autoupdate port in `reload.js`
