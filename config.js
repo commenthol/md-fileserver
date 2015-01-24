@@ -10,10 +10,10 @@ var config = {
 	home: process.env.HOME,
 	/// browser settings per platform
 	browser: {
-		darwin: 'open',          // Default browser 
+		darwin: 'open',              // Default browser
 		//darwin: 'open -a Safari',  // Safari
 		//darwin: 'open -a Firefox', // Firefox
-		linux: 'x-www-browser',  // Default browser use `sudo update-alternatives --config x-www-browser` to change
+		linux: 'x-www-browser',      // Default browser use `sudo update-alternatives --config x-www-browser` to change
 		//linux: 'firefox',
 		win32: 'firefox.exe'
 	},
@@ -42,7 +42,8 @@ var config = {
 		assets: __dirname + '/assets',
 		css: '/css/',
 		js: '/js/',
-		template: 'template.html'
+		template: 'template.html',
+		highlight: 'himbeere.css', // github.css || himbeere.css
 	},
 };
 
