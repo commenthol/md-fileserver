@@ -1,8 +1,11 @@
 {
   "name": "md-fileserver",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Locally view markdown files in a browser",
   "main": "index.js",
+  "engine": {
+    "node": ">=0.8.0"
+  },
   "bin": {
     "mdopen": "./bin/mdopen.js",
     "mdstart": "./bin/mdstart.js"
@@ -20,13 +23,13 @@
   },
   "dependencies": {
     "async": "^0.9.0",
-    "express": "^4.4.3",
-    "highlight.js": "^8.0.0",
-    "lodash": "^2.4.1",
-    "marked": "^0.3.2",
-    "markedpp": "latest",
-    "serve-index": "^1.1.2",
-    "serve-static": "^1.2.3",
+    "express": "^4.12.3",
+    "highlight.js": "^8.5.0",
+    "lodash": "^3.6.0",
+    "marked": "^0.3.3",
+    "markedpp": "^0.3.7",
+    "serve-index": "^1.6.3",
+    "serve-static": "^1.9.2",
     "websocket": "^1.0.8"
   },
   "devDependencies": {},
