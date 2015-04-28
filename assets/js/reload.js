@@ -12,7 +12,7 @@
 		var connection = new WebSocket('ws://<%= hostname %>');
 
 		connection.onmessage = function (message) {
-			console.log(decodeURIComponent(message.data));			
+			console.log(decodeURIComponent(message.data));
 			console.log(decodeURIComponent(location.pathname));
 			if (decodeURIComponent(message.data) === decodeURIComponent(location.pathname)) {
 				location.reload();
@@ -35,9 +35,9 @@
 			console.log(err);
 		};
 
-		// close connection before reloading page. 
+		// close connection before reloading page.
 		window.onbeforeunload = function(){
-			connection.close(); 
+			connection.close();
 		};
 	}
 

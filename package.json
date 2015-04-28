@@ -1,6 +1,6 @@
 {
   "name": "md-fileserver",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "description": "Locally view markdown files in a browser",
   "main": "index.js",
   "engine": {
@@ -35,8 +35,8 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "markedpp": "markedpp README.md > o.md && mv o.md README.md",
-    "jshint": "find . -iname \"*.js\" | grep -v \"node_modules\" | xargs jshint"
+    "readme": "markedpp README.md > o.md && mv o.md README.md",
+    "lint": "jshint lib/*.js *.js"
   },
   "keywords": [
     "markdown",
