@@ -26,8 +26,11 @@ This cheatsheet uses markdown syntax based on:
     * [Indented Block](#indented-block)
     * [Highlighting](#highlighting)
   * [Inline HTML](#inline-html)
+  * [Inline Comments](#inline comments)
 * [Preprocessor](#preprocessor)
   * [Include other files](#include-other-files)
+  * [Table of Contents](#table-of-contents-1)
+  * [Reference list](#reference-list)
 
 ## Headers
 
@@ -358,16 +361,16 @@ ___
 
 ## Images
 
-```
-![Alt Text](path_to/img.png)
-![Alt Text](path_to/img.png "Optional Title")
-![Alt Text](http://placekitten.com/100)
-<img src="path_to/img.png" title="Optional Title" alt="Alt Text" style="width: 50px;">
-```
+    ![Alt Text](path_to/img.png)
+    ![Alt Text](path_to/img.png "Optional Title")
+    ![Alt Text](http://placehold.it/150x100)
+    ![broken image](http://localhost/my-broken-image)
+    <img src="path_to/img.png" title="Optional Title" alt="Alt Text" style="width: 50px;">
 
 ![Alt Text](path_to/img.png)
 ![Alt Text](path_to/img.png "Optional Title")
-![Alt Text](http://placekitten.com/100)
+![Alt Text](http://placehold.it/150x100)
+![broken image](http://localhost/my-broken-image)
 <img src="path_to/img.png" title="Optional Title" alt="Alt Text" style="width: 50px;">
 
 
@@ -428,12 +431,24 @@ outputs:
       Use HTML <em>tags</em> <strong>instead</strong>.</dd>
 </dl>
 
+## Inline Comments
+
+    <!---
+    This is a comment (!NOTE the 3 <!--- dashes)
+    -->
+
+<!---
+This is a comment (NOTE the 3 <!--- dashes)
+-->
+
 
 # Preprocessor
 
 Check [markedpp][] for further options.
 
 ## Include other files
+
+See <https://github.com/commenthol/markedpp#include>
 
 __Syntax:__
 
@@ -443,7 +458,10 @@ __Syntax:__
 
 !include (path_to/include.md)
 
+<a name="table-of-contents-1">
 ## Table of Contents
+
+See <https://github.com/commenthol/markedpp#toc>
 
 __Syntax:__
 
@@ -454,6 +472,8 @@ __Syntax:__
 !toc
 
 ## Reference list
+
+See <https://github.com/commenthol/markedpp#ref>
 
 __Syntax:__
 

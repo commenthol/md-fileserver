@@ -35,7 +35,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "readme": "markedpp README.md > o.md && mv o.md README.md",
+    "readme": "markedpp --githubid -i README.md -o README.md",
     "lint": "jshint lib/*.js *.js"
   },
   "keywords": [
