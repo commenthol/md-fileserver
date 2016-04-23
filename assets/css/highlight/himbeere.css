@@ -4,6 +4,14 @@ himbeere style
 
 */
 
+html {
+  font-family: Arial, sans-serif;
+}
+
+thead th {
+  background-color: #f8f8f8
+}
+
 .markdown-body .highlight pre,
 .markdown-body pre {
     background-color: #2A2D30;

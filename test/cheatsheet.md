@@ -26,7 +26,7 @@ This cheatsheet uses markdown syntax based on:
     * [Indented Block](#indented-block)
     * [Highlighting](#highlighting)
   * [Inline HTML](#inline-html)
-  * [Inline Comments](#inline comments)
+  * [Inline Comments](#inline-comments)
 * [Preprocessor](#preprocessor)
   * [Include other files](#include-other-files)
   * [Table of Contents](#table-of-contents-1)
@@ -82,6 +82,9 @@ This as not as well..
 This is a new paragraph.
 
 Forcing a new line with `<br>` <br> causes a new line.
+
+Or ending a line with two spaces  
+causes a line break as well
 ```
 
 A paragraph is a paragraph is a paragraph is a paragraph is a paragraph. Is a paragraph is a paragraph is a paragraph is a paragraph is a paragraph. Is a paragraph is a paragraph is a paragraph.
@@ -91,6 +94,9 @@ This as not as well..
 This is a new paragraph.
 
 Forcing a new line with `<br>` <br> causes a new line.
+
+Or ending a line with two spaces  
+causes a line-break as well
 
 ## Styling Text
 
@@ -361,18 +367,37 @@ ___
 
 ## Images
 
+<style>
+img[alt=img100x] {width: 100px; border: 5px solid red; border-radius: 25%}
+</style>
+
     ![Alt Text](path_to/img.png)
     ![Alt Text](path_to/img.png "Optional Title")
     ![Alt Text](http://placehold.it/150x100)
     ![broken image](http://localhost/my-broken-image)
-    <img src="path_to/img.png" title="Optional Title" alt="Alt Text" style="width: 50px;">
 
 ![Alt Text](path_to/img.png)
 ![Alt Text](path_to/img.png "Optional Title")
 ![Alt Text](http://placehold.it/150x100)
 ![broken image](http://localhost/my-broken-image)
+
+Using plain html can be used to size images:
+
+    <img src="path_to/img.png" title="Optional Title" alt="Alt Text" style="width: 50px;">
+
 <img src="path_to/img.png" title="Optional Title" alt="Alt Text" style="width: 50px;">
 
+Styling images can also be done by hijacking on the `alt` attribute.
+
+    <style>
+    img[alt=img100x] {width: 100px; border: 5px solid red; border-radius: 25%}
+    </style>
+    ![img100x](path_to/img.png)
+
+<style>
+img[alt=img100x] {width: 100px; border: 5px solid red; border-radius: 25%}
+</style>
+![img100x](path_to/img.png)
 
 ## Code
 
@@ -482,8 +507,6 @@ __Syntax:__
 ```
 
 !ref
-
-
 
 [Markdown Specification]: http://daringfireball.net/projects/markdown/syntax
 [Github Flavored Markdown]: https://help.github.com/articles/github-flavored-markdown
