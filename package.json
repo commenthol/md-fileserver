@@ -22,15 +22,15 @@
     "test": "test"
   },
   "dependencies": {
-    "async": "^0.9.0",
-    "express": "^4.12.3",
-    "highlight.js": "^8.5.0",
-    "lodash": "^3.6.0",
-    "marked": "^0.3.3",
-    "markedpp": "^0.3.7",
-    "serve-index": "^1.6.3",
-    "serve-static": "^1.9.2",
-    "websocket": "^1.0.8"
+    "async": "^1.5.2",
+    "express": "^4.13.4",
+    "highlight.js": "^9.3.0",
+    "lodash": "^4.11.1",
+    "marked": "^0.3.5",
+    "markedpp": "^0.3.8",
+    "serve-index": "^1.7.3",
+    "serve-static": "^1.10.2",
+    "websocket": "^1.0.22"
   },
   "devDependencies": {},
   "scripts": {
