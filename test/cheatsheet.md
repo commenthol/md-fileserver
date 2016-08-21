@@ -27,6 +27,10 @@ This cheatsheet uses markdown syntax based on:
     * [Highlighting](#highlighting)
   * [Inline HTML](#inline-html)
   * [Inline Comments](#inline-comments)
+* [Extensions](#extensions)
+  * [Emoji](#emoji)
+  * [Tasklists](#tasklists)
+  * [Footnotes](#footnotes)
 * [Preprocessor](#preprocessor)
   * [Include other files](#include-other-files)
   * [Table of Contents](#table-of-contents-1)
@@ -466,6 +470,59 @@ outputs:
 This is a comment (NOTE the 3 <!--- dashes)
 -->
 
+# Extensions
+
+## Emoji
+
+See http://www.webpagefx.com/tools/emoji-cheat-sheet/
+
+:smile: `:smile:`  
+:blush: `:blush:`  
+:sunny: `:sunny:`  
+:heavy_multiplication_x: `:heavy_multiplication_x:`  
+:heavy_check_mark: `:heavy_check_mark:`  
+
+## Tasklists
+
+```
+- [ ] Open
+- [x] Done
+```
+
+- [ ] Open
+- [x] Done
+
+## Footnotes
+
+```
+Footnote 1 link[^first].
+
+Footnote 2 link[^second].
+
+Inline footnote^[Text of inline footnote] definition.
+
+Duplicated footnote reference[^second].
+
+[^first]: Footnote **can have markup**
+
+    and multiple paragraphs.
+
+[^second]: Footnote text.
+```
+
+Footnote 1 link[^first].
+
+Footnote 2 link[^second].
+
+Inline footnote^[Text of inline footnote] definition.
+
+Duplicated footnote reference[^second].
+
+[^first]: Footnote **can have markup**
+
+    and multiple paragraphs.
+
+[^second]: Footnote text.
 
 # Preprocessor
 
@@ -478,23 +535,44 @@ See <https://github.com/commenthol/markedpp#include>
 __Syntax:__
 
 ```
-!include (path_to/include.md)
+!include(path_to/include.md)
 ```
 
+<!-- include (path_to/include.md) -->
+
+---
+
+This is an included file.
+
 !include (path_to/include.md)
 
+---
+<!-- /include -->
+
 <a name="table-of-contents-1">
+
 ## Table of Contents
 
-See <https://github.com/commenthol/markedpp#toc>
+See <https://github.com/commenthol/markedpp#toc> for more options
 
 __Syntax:__
 
 ```
 !toc
+
+!toc(minlevel=3 maxlevel=4 omit="h3;Unordered")
 ```
 
-!toc
+<!-- !toc (minlevel=3 maxlevel=4 omit="h3;Unordered") -->
+
+* [Escaping](#escaping)
+* [Ordered, Mixed](#ordered-mixed)
+* [Column Alignment](#column-alignment)
+* [Link within document](#link-within-document)
+* [Indented Block](#indented-block)
+* [Highlighting](#highlighting)
+
+<!-- toc! -->
 
 ## Reference list
 
@@ -506,7 +584,14 @@ __Syntax:__
 !ref
 ```
 
-!ref
+<!-- !ref -->
+
+* [Github Flavored Markdown][Github Flavored Markdown]
+* [Markdown Specification][Markdown Specification]
+* [markedpp][markedpp]
+* [Referenced Link][Referenced Link]
+
+<!-- ref! -->
 
 [Markdown Specification]: http://daringfireball.net/projects/markdown/syntax
 [Github Flavored Markdown]: https://help.github.com/articles/github-flavored-markdown

@@ -31,6 +31,15 @@ a.top {
 .markdown-body pre {
   margin: 0 0;
 }
+
+.markdown-body .task-list-item {
+  list-style: none;
+}
+.markdown-body .task-list-item-checkbox {
+  margin: 0 0.2em 0.25em -1.6em;
+  vertical-align: middle;
+}
+
 x-toc li {
   list-style: none outside none;
 }

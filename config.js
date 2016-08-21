@@ -27,15 +27,18 @@ var config = {
 		level: 3,     // default level for !toc and !numberheadings
 		minlevel: 1   // default minlevel for !toc and !numberheadings
 	},
-	/// options for `marked` see https://github.com/chjj/marked
-	marked: {
-		gfm: true,
-		tables: true,
-		breaks: false,
-		pedantic: false,
-		sanitize: false,
-		smartLists: true,
-		smartypants: false
+	/// options for `markdown-it` see https://github.com/markdown-it/markdown-it#api
+	markdownIt: {
+		html: true,
+		linkify: true
+	},
+	/// add `markdown-it` plugins
+	markdownItPlugins: function (parser) {
+		return parser
+			.use(require('markdown-it-emoji'))
+			.use(require('markdown-it-task-lists'))
+			.use(require('markdown-it-footnote'))
+			// .use(require(other-plugin), {/* options */})
 	},
 	/// template settings
 	template: {

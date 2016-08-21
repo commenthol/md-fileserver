@@ -8,7 +8,11 @@ Starts a local server to render "markdown" files within your browser:
 
 * Runs on `localhost:4000`
 * Supports [Markdown Syntax][] with [GFM][].
-* Based on [marked][].
+* Markdown rendering based on [markdown-it][].   
+  Enabled Plugins for:
+  * Emojis
+  * Task lists
+  * Footnotes
 * Includes [markedpp][] as preprocessor.
 * Supports syntax highlighting using [highlight.js][]
 * For supported markdown Syntax see [Cheatsheet][].
@@ -75,7 +79,7 @@ In `config.js` you can change several settings to fit your needs. These include:
 
 * **Browser**: Default is _Safari_ on OSX and _Firefox_ on Linux and Windows.
 * **Style**: Styles are located in `./assets/`. Currently only a GFM like style is supported. Others are welcome.
-* **Markdown** options: Change the options how [marked][] processes your markdown files.
+* **Markdown** options: Change the options how [markdown-it][] processes your markdown files.
 * **Markdown PP** options: Change the options how [markedpp][] pre-processes your markdown files.
 
 ## Contribution
@@ -86,7 +90,7 @@ all code is your original work.
 
 ## License
 
-Copyright (c) 2014 commenthol   
+Copyright (c) 2016 commenthol   
 Software is released under [MIT License][].
 
 ## References
@@ -106,9 +110,7 @@ Software is released under [MIT License][].
 [Cheatsheet]: test/cheatsheet.md
 [GFM]: https://help.github.com/articles/github-flavored-markdown
 [highlight.js]: http://highlightjs.org
-[marked]: https://github.com/chjj/marked
+[markdown-it]: https://github.com/markdown-it/markdown-it
 [markedpp]: https://github.com/commenthol/markedpp
 [Markdown Syntax]: http://daringfireball.net/projects/markdown/syntax
 [MIT License]: ./LICENSE
-
-

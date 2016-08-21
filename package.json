@@ -22,15 +22,19 @@
     "test": "test"
   },
   "dependencies": {
-    "async": "^1.5.2",
-    "express": "^4.13.4",
-    "highlight.js": "^9.3.0",
-    "lodash": "^4.11.1",
-    "marked": "^0.3.5",
-    "markedpp": "^0.3.8",
-    "serve-index": "^1.7.3",
-    "serve-static": "^1.10.2",
-    "websocket": "^1.0.22"
+    "async": "^2.0.1",
+    "express": "^4.14.0",
+    "highlight.js": "^9.6.0",
+    "lodash": "^4.15.0",
+    "markdown-it": "^7.0.1",
+    "markdown-it-anchor": "^2.5.0",
+    "markdown-it-emoji": "^1.2.0",
+    "markdown-it-footnote": "^3.0.1",
+    "markdown-it-task-lists": "^1.4.1",
+    "markedpp": "^0.3.9",
+    "serve-index": "^1.8.0",
+    "serve-static": "^1.11.1",
+    "websocket": "^1.0.23"
   },
   "devDependencies": {},
   "scripts": {
