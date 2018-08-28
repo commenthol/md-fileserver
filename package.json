@@ -1,6 +1,6 @@
 {
   "name": "md-fileserver",
-  "version": "1.1.0",
+  "version": "1.1.1-0",
   "description": "Locally view markdown files in a browser",
   "keywords": [
     "fileserver",
@@ -27,17 +27,18 @@
   },
   "scripts": {
     "clean": "rimraf node_modules *.tgz",
+    "all": "npm run lint",
     "lint": "eslint '**/*.js'",
     "readme": "markedpp --githubid -i README.md -o README.md",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node bin/mdopen.js test/cheatsheet.md"
   },
   "dependencies": {
-    "asyncc": "^2.0.1",
+    "asyncc": "^2.0.3",
     "express": "^4.16.2",
     "highlight.js": "^9.12.0",
     "lodash": "^4.17.5",
     "markdown-it": "^8.4.1",
-    "markdown-it-anchor": "^4.0.0",
+    "markdown-it-anchor": "^5.0.2",
     "markdown-it-emoji": "^1.4.0",
     "markdown-it-footnote": "^3.0.1",
     "markdown-it-task-lists": "^2.1.0",
@@ -47,7 +48,7 @@
     "websocket": "^1.0.25"
   },
   "devDependencies": {
-    "eslint": "^4.18.2"
+    "eslint": "^5.4.0"
   },
   "engine": {
     "node": ">=0.8.0"
