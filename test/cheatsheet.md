@@ -217,8 +217,9 @@ Wi*thin*Words   - but not -   Wi_thin_Words
 3. Grey
 1. White
 
+<!--- -->
 
-1. Cyan
+40. Cyan
    1. RGB (0, 255, 255)
    1. A color between green and blue
       * Green
@@ -232,14 +233,15 @@ Wi*thin*Words   - but not -   Wi_thin_Words
 
 1. Red
 2. Green
-3. Blue <span style="color: #f55;">**Note:** Counting continues with just a single line-break</span>
+3. Blue <span style="color: #f55;">**Note:** Counting continues with line-breaks</span>
 
 2. Black
 3. Grey
 1. White
 
+<!--- -->
 
-1. Cyan <span style="color: #f55;">**Note:** Counting is restarted with two line-breaks</span>
+40. Cyan <span style="color: #f55;">**Note:** Counting is restarted with 40 after <!--- --&gt;</span>
    1. RGB (0, 255, 255)
    1. A color between green and blue
       * Green
