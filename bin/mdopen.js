@@ -21,7 +21,7 @@ isPortOpen({ port: config.port }, function (isOpen) {
       args.push(file)
       browserExe = args.shift()
       child.spawn(browserExe, args)
-    }, isOpen ? 0 : 150)
+    }, isOpen ? 0 : 250)
   } else {
     console.log('\
   Usage: mdopen <file>\n\
