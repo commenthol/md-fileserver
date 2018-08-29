@@ -2,7 +2,7 @@
 
 > Locally view markdown files in a browser.
 
-![NPM version](https://badge.fury.io/js/md-fileserver.png)
+![NPM version](https://badge.fury.io/js/md-fileserver.svg)
 
 Starts a local server to render "markdown" files within your browser:
 
@@ -82,6 +82,17 @@ In `config.js` you can change several settings to fit your needs. These include:
 * **Markdown** options: Change the options how [markdown-it][] processes your markdown files.
 * **Markdown PP** options: Change the options how [markedpp][] pre-processes your markdown files.
 
+Install personalized version:
+
+1.  Clone this repo
+    ````
+    git clone https://github.com/commenthol/md-fileserver.git
+    cd md-fileserver
+    ````
+2.  Make your changes in `./config.js`
+3.  Install with `npm i -g` from same folder.  
+    If there are issues with installing you'll need to uninstall first with `npm un -g`
+
 ## Contribution
 
 If you contribute code to this project, you are implicitly allowing your code
@@ -90,7 +101,7 @@ all code is your original work.
 
 ## License
 
-Copyright (c) 2016 commenthol   
+Copyright (c) 2016-present commenthol   
 Software is released under [MIT License][].
 
 ## References
@@ -101,7 +112,6 @@ Software is released under [MIT License][].
 * [GFM][GFM]
 * [highlight.js][highlight.js]
 * [Markdown Syntax][Markdown Syntax]
-* [marked][marked]
 * [markedpp][markedpp]
 * [MIT License][MIT License]
 

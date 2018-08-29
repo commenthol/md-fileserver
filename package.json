@@ -1,6 +1,6 @@
 {
   "name": "md-fileserver",
-  "version": "1.1.1",
+  "version": "1.2.0-0",
   "description": "Locally view markdown files in a browser",
   "keywords": [
     "fileserver",
@@ -45,7 +45,7 @@
     "markedpp": "^0.3.10",
     "serve-index": "^1.9.1",
     "serve-static": "^1.13.2",
-    "websocket": "^1.0.25"
+    "ws": "^6.0.0"
   },
   "devDependencies": {
     "eslint": "^5.4.0"
