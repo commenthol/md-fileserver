@@ -8,16 +8,11 @@ var config = {
   host: 'localhost',
   /// port for server
   port: 4000,
-  /// grant access only to $HOME
-  home: process.env.HOME,
   /// browser settings per platform
   browser: {
     darwin: 'open', // Default browser
-    // darwin: 'open -a Safari',  // Safari
-    // darwin: 'open -a Firefox', // Firefox
     linux: 'x-www-browser', // Default browser use `sudo update-alternatives --config x-www-browser` to change
-    // linux: 'firefox',
-    win32: 'firefox.exe'
+    win32: 'C:\\Program Files\\Mozilla Firefox\\firefox.exe'
   },
   /// show only markdown files in browser folder view
   filter: true,
@@ -48,7 +43,7 @@ var config = {
     css: '/css/',
     js: '/js/',
     template: 'template.html',
-    highlight: 'himbeere.css' // github.css || himbeere.css
+    highlight: 'github.css' // github.css || himbeere.css
   }
 }
 

@@ -1,25 +1,26 @@
 #!/usr/bin/env node
 
-var path = require('path')
-var child = require('child_process')
-var isPortOpen = require('../lib/checkport')
-var config = require('../config')
+const path = require('path')
+const child = require('child_process')
+const isPortOpen = require('../lib/checkport')
+const config = require('../config')
+const { isWin32, filename2uri } = require('../lib/utils')
 
-var args
-var file = process.argv[2]
-var browserExe = config.browser[process.platform]
+const args = []
+let file = process.argv[2]
+let browserExe = config.browser[process.platform]
 
 isPortOpen({ port: config.port }, function (isOpen) {
   if (!isOpen) {
-    child.execFile(path.join(__dirname, 'mdstart.js'))
+    child.execFile('node', [path.resolve(__dirname, 'mdstart.js')],
+      isWin32 ? {windowsHide: true, shell: true} : void 0)
   }
 
   if (file && browserExe) {
     setTimeout(function () {
-      file = 'http://' + config.host + ':' + config.port + path.resolve(process.cwd(), file)
-      args = browserExe.split(/ +/)
+      file = 'http://' + config.host + ':' + config.port +
+        filename2uri(path.resolve(process.cwd(), file))
       args.push(file)
-      browserExe = args.shift()
       child.spawn(browserExe, args)
     }, isOpen ? 0 : 250)
   } else {
