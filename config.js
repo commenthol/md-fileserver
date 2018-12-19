@@ -10,9 +10,9 @@ var config = {
   port: 4000,
   /// browser settings per platform
   browser: {
-    darwin: 'open', // Default browser
-    linux: 'x-www-browser', // Default browser use `sudo update-alternatives --config x-www-browser` to change
-    win32: 'C:\\Program Files\\Mozilla Firefox\\firefox.exe'
+    darwin: ['open'],
+    linux: ['x-www-browser'], // Default browser use `sudo update-alternatives --config x-www-browser` to change
+    win32: ['cmd.exe', '/C', 'start']
   },
   /// show only markdown files in browser folder view
   filter: true,

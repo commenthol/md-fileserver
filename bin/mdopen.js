@@ -7,8 +7,8 @@ const config = require('../config')
 const { isWin32, filename2uri } = require('../lib/utils')
 
 const args = []
-let file = process.argv[2]
-let browserExe = config.browser[process.platform]
+const file = process.argv[2]
+const browserExe = config.browser[process.platform]
 
 isPortOpen({ port: config.port }, function (isOpen) {
   if (!isOpen) {
@@ -18,10 +18,11 @@ isPortOpen({ port: config.port }, function (isOpen) {
 
   if (file && browserExe) {
     setTimeout(function () {
-      file = 'http://' + config.host + ':' + config.port +
+      const url = 'http://' + config.host + ':' + config.port +
         filename2uri(path.resolve(process.cwd(), file))
-      args.push(file)
-      child.spawn(browserExe, args)
+      const [exe, ...args] = browserExe
+      args.push(url)
+      child.spawn(exe, args)
     }, isOpen ? 0 : 250)
   } else {
     console.log('\
