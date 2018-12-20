@@ -16,7 +16,7 @@ Starts a local server to render "markdown" files within your browser:
 * Includes [markedpp][] as preprocessor.
 * Supports syntax highlighting using [highlight.js][]
 * For supported markdown Syntax see [Cheatsheet][].
-* Automatic update in browser after saving edited file. (Tested on Linux, MacOSX)
+* Automatic update in browser after saving edited file. (Tested on Linux, MacOS, Windows)
 
 ## Table of Contents
 
@@ -62,8 +62,7 @@ Alternatively type in your terminal:
 mdopen <file>
 ```
 
-This will open the browser with the processed markdown file. For OSX _Safari_, for Linux and Windows _Firefox_ is used as default. This can be changed in the `config.js`.
-
+This will open the default browser with the processed markdown file.
 
 ## Cheatsheet
 
@@ -77,7 +76,7 @@ mdopen test/cheatsheet.md
 
 In `config.js` you can change several settings to fit your needs. These include:
 
-* **Browser**: Default is _Safari_ on OSX and _Firefox_ on Linux and Windows.
+* **Browser**: Default browser of MacOS, Linux or Windows is used.
 * **Style**: Styles are located in `./assets/`. Currently only a GFM like style is supported. Others are welcome.
 * **Markdown** options: Change the options how [markdown-it][] processes your markdown files.
 * **Markdown PP** options: Change the options how [markedpp][] pre-processes your markdown files.
