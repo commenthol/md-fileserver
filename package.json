@@ -11,6 +11,10 @@
   "bugs": {
     "url": "http://github.com/commenthol/md-fileserver/issues"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/commenthol/md-fileserver.git"
+  },
   "license": "MIT",
   "author": "commenthol",
   "main": "index.js",
@@ -19,17 +23,14 @@
     "mdstart": "./bin/mdstart.js"
   },
   "directories": {
+    "lib": "lib",
     "test": "test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/commenthol/md-fileserver.git"
   },
   "scripts": {
     "clean": "rimraf node_modules *.tgz",
-    "all": "npm run lint && npm run copy",
     "copy": "node scripts/prebuild.js",
     "lint": "eslint '**/*.js'",
+    "prepare": "npm run lint && npm run copy",
     "readme": "markedpp --githubid -i README.md -o README.md",
     "test": "node bin/mdopen.js test/cheatsheet.md"
   },
@@ -59,6 +60,6 @@
     "shelljs": "^0.8.3"
   },
   "engine": {
-    "node": ">=0.8.0"
+    "node": ">=6.0.0"
   }
 }
