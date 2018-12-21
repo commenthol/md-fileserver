@@ -35,6 +35,7 @@ var config = {
       .use(require('markdown-it-emoji'))
       .use(require('markdown-it-task-lists'))
       .use(require('markdown-it-footnote'))
+      .use(require('markdown-it-katex'))
     // .use(require(other-plugin), {/* options */})
   },
   /// template settings

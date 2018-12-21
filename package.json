@@ -27,7 +27,8 @@
   },
   "scripts": {
     "clean": "rimraf node_modules *.tgz",
-    "all": "npm run lint",
+    "all": "npm run lint && npm run copy",
+    "copy": "node scripts/prebuild.js",
     "lint": "eslint '**/*.js'",
     "readme": "markedpp --githubid -i README.md -o README.md",
     "test": "node bin/mdopen.js test/cheatsheet.md"
@@ -41,6 +42,7 @@
     "markdown-it-anchor": "^5.0.2",
     "markdown-it-emoji": "^1.4.0",
     "markdown-it-footnote": "^3.0.1",
+    "markdown-it-katex": "^2.0.3",
     "markdown-it-task-lists": "^2.1.0",
     "markedpp": "^0.3.10",
     "serve-index": "^1.9.1",
@@ -48,7 +50,13 @@
     "ws": "^6.0.0"
   },
   "devDependencies": {
-    "eslint": "^5.4.0"
+    "eslint": "^5.10.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "shelljs": "^0.8.3"
   },
   "engine": {
     "node": ">=0.8.0"

@@ -6,14 +6,13 @@ const isPortOpen = require('../lib/checkport')
 const config = require('../config')
 const { isWin32, filename2uri } = require('../lib/utils')
 
-const args = []
 const file = process.argv[2]
 const browserExe = config.browser[process.platform]
 
 isPortOpen({ port: config.port }, function (isOpen) {
   if (!isOpen) {
     child.execFile('node', [path.resolve(__dirname, 'mdstart.js')],
-      isWin32 ? {windowsHide: true, shell: true} : void 0)
+      isWin32 ? { windowsHide: true, shell: true } : void 0)
   }
 
   if (file && browserExe) {
@@ -25,10 +24,11 @@ isPortOpen({ port: config.port }, function (isOpen) {
       child.spawn(exe, args)
     }, isOpen ? 0 : 250)
   } else {
-    console.log('\
-  Usage: mdopen <file>\n\
-  \n\
-  Make sure that the "md-fileserver" is running.\n\
-  Otherwise start it with `mdstart`.\n')
+    console.log(`
+  Usage: mdopen <file>
+
+  Make sure that the "md-fileserver" is running.
+  Otherwise start it with \`mdstart\`
+  `)
   }
 })

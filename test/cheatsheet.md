@@ -31,6 +31,7 @@ This cheatsheet uses markdown syntax based on:
   * [Emoji](#emoji)
   * [Tasklists](#tasklists)
   * [Footnotes](#footnotes)
+  * [Math with KaTeX](#math-with-katex)
 * [Preprocessor](#preprocessor)
   * [Include other files](#include-other-files)
   * [Table of Contents](#table-of-contents-1)
@@ -525,6 +526,32 @@ Duplicated footnote reference[^second].
     and multiple paragraphs.
 
 [^second]: Footnote text.
+
+## Math with KaTeX
+
+See [KaTeX](https://katex.org/docs/supported.html) for supported functions
+
+```
+The Pythagorean Theorem, $a^2 + b^2 = c^2$, is useful for computing distances.
+
+Formula is one that you learned in Calculus class.
+
+$$\int_0^1 x^n dx = \frac{1}{n+1}$$
+
+When $a \ne 0$, there are two solutions to $(ax^2 + bx + c = 0)$ and they are
+
+$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}$$
+```
+
+The Pythagorean Theorem, $a^2 + b^2 = c^2$, is useful for computing distances.
+
+Formula is one that you learned in Calculus class.
+
+$$\int_0^1 x^n dx = \frac{1}{n+1}$$
+
+When $a \ne 0$, there are two solutions to $(ax^2 + bx + c = 0)$ and they are
+
+$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}$$
 
 # Preprocessor
 
