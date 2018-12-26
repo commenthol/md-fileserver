@@ -1,6 +1,7 @@
 module.exports = {
   extends: "standard",
   env: {
-    browser: true
+    browser: true,
+    mocha: true
   }
 };
