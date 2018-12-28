@@ -21,6 +21,13 @@ describe('md-fileserver', function () {
       .expect(302)
   })
 
+  it('should load files with non-ascii chars', function () {
+    return request(app)
+      .get(filename2uri(resolve(__dirname, 'test.md', 'råndÖm.md')))
+      .expect('content-type', 'text/html; charset=utf-8')
+      .expect(200, /råndÖm<\/h1>/)
+  })
+
   it('should serve plain text files without extension', function () {
     return request(app)
       .get(filename2uri(resolve(__dirname, '..', 'LICENSE')))

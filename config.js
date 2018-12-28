@@ -4,7 +4,6 @@ var path = require('path')
 
 var config = {
   /// host
-  // host: '127.0.0.1',
   host: 'localhost',
   /// port for server
   port: 4000,
@@ -27,7 +26,8 @@ var config = {
   /// options for `markdown-it` see https://github.com/markdown-it/markdown-it#api
   markdownIt: {
     html: true,
-    linkify: true
+    linkify: true,
+    typographer: false
   },
   /// add `markdown-it` plugins
   markdownItPlugins: function (parser) {
