@@ -2,7 +2,7 @@
 
 > Locally view markdown files in a browser.
 
-![NPM version](https://badge.fury.io/js/md-fileserver.svg)
+[![NPM version](https://badge.fury.io/js/md-fileserver.svg)](https://www.npmjs.com/package/md-fileserver)
 
 Starts a local server to render "markdown" files within your browser:
 
