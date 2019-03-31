@@ -13,6 +13,7 @@ Starts a local server to render "markdown" files within your browser:
   * Emojis
   * Task lists
   * Footnotes
+  * [KaTeX][]
 * Includes [markedpp][] as preprocessor.
 * Supports syntax highlighting using [highlight.js][]
 * For supported markdown Syntax see [Cheatsheet][].
@@ -26,6 +27,7 @@ Starts a local server to render "markdown" files within your browser:
 * [Usage](#usage)
   * [Start the Local Server](#start-the-local-server)
   * [Open a markdown file](#open-a-markdown-file)
+* [Configuration](#configuration)
 * [Cheatsheet](#cheatsheet)
 * [Personalisation](#personalisation)
 * [Contribution](#contribution)
@@ -50,19 +52,29 @@ In your terminal type:
 mdstart
 ```
 
-__Note__: The local server can only be reached from your local computer on port 4000. Any remote access from other computers to your files is denied.
+Open the given link <http://localhost:4000/?session=...> in your browser and
+navigate to the markdown file.
+
+__Note__: The local server can only be reached from your local computer on port 4000.
+Any remote access from other computers to your files is denied.
+An internal session is used so you'll need to either start with a file or use the provided
+link with the session parameter.
 
 ### Open a markdown file
 
-Open <http://localhost:4000> in your browser and navigate to the markdown file.
-
-Alternatively type in your terminal:
+Type in your terminal:
 
 ```
 mdstart <file>
 ```
 
 This will open the default browser with the processed markdown file.
+
+## Configuration
+
+```
+mdstart /config
+```
 
 ## Cheatsheet
 
@@ -103,8 +115,8 @@ all code is your original work.
 Copyright (c) 2014-present commenthol   
 Software is released under [MIT License][].
 
-Bundled fonts from KaTex by Khan Academy - https://github.com/Khan/KaTeX
-License - https://github.com/Khan/KaTeX/LICENSE.txt (Fonts: SIL OFL 1.1, Code: MIT License)
+Bundled fonts from [KaTeX][] by Khan Academy - https://github.com/Khan/KaTeX - 
+[License](https://github.com/KaTeX/KaTeX/blob/master/LICENSE) (Fonts: SIL OFL 1.1, Code: MIT License)
 
 ## References
 
@@ -113,12 +125,14 @@ License - https://github.com/Khan/KaTeX/LICENSE.txt (Fonts: SIL OFL 1.1, Code: M
 * [Cheatsheet][Cheatsheet]
 * [GFM][GFM]
 * [highlight.js][highlight.js]
+* [KaTeX][]
 * [Markdown Syntax][Markdown Syntax]
 * [markedpp][markedpp]
 * [MIT License][MIT License]
 
 <!-- ref! -->
 
+[KaTeX]: https://katex.org/
 [Cheatsheet]: test/cheatsheet.md
 [GFM]: https://help.github.com/articles/github-flavored-markdown
 [highlight.js]: http://highlightjs.org

@@ -1,7 +1,5 @@
 'use strict'
 
-var path = require('path')
-
 var config = {
   /// host
   // host: '127.0.0.1',
@@ -16,8 +14,6 @@ var config = {
   },
   /// show only markdown files in browser folder view
   filter: true,
-  /// don't allow path traversal below users homedir
-  pathTraversal: false,
   /// options for `markedpp` see https://github.com/commenthol/markedpp
   markedpp: {
     gfm: true, // consider gfm fences
@@ -44,8 +40,6 @@ var config = {
   },
   /// template settings
   template: {
-    assets: path.join(__dirname, 'assets'),
-    template: 'template.html',
     highlight: 'github' /// see available styles at https://github.com/highlightjs/highlight.js/tree/master/src/styles
   }
 }

@@ -6,4 +6,7 @@ import '../css/screen.css'
 import '../css/print.css'
 
 import { createConnection } from './reload'
+import { aTargetBlank } from './aTargetBlank'
+
 createConnection()
+aTargetBlank()

@@ -6,10 +6,10 @@
   * [x] auto update on file changes (using websockets)
   * [x] autoupdate port in `reload.js`
   * [x] change markdown parser from `marked` to `markdown-it`
+  * [x] nicer css template(s) for highlight
+  * [x] enable config changes via server
   * [ ] write pid file of server
   * [ ] allow stoping the server with `mdstart --stop`
-  * [ ] nicer css template(s)
-  * [ ] enable config changes via server
 
 * fixes
   * [x] allow websocket connections from multiple browsers
