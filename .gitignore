@@ -2,6 +2,8 @@
 /tmp
 /coverage
 /.nyc_output
-/assets/css/katex
+/assets
+!/assets/template.html
+!/assets/highlight/*
 *.log
 *.tgz

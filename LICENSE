@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2014 commenthol
+Copyright (c) 2014- commenthol
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
@@ -21,5 +21,8 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+----
 
+Bundled fonts from KaTex by Khan Academy - https://github.com/Khan/KaTeX
+License - https://github.com/Khan/KaTeX/LICENSE.txt (Fonts: SIL OFL 1.1, Code: MIT License)
 

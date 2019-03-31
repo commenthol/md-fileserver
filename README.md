@@ -100,8 +100,11 @@ all code is your original work.
 
 ## License
 
-Copyright (c) 2016-present commenthol   
+Copyright (c) 2014-present commenthol   
 Software is released under [MIT License][].
+
+Bundled fonts from KaTex by Khan Academy - https://github.com/Khan/KaTeX
+License - https://github.com/Khan/KaTeX/LICENSE.txt (Fonts: SIL OFL 1.1, Code: MIT License)
 
 ## References
 

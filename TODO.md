@@ -17,3 +17,4 @@
   * [x] autoreconnect browser websocket connection
   * [x] watchFile not working on OSX
   * [x] fix problems with URI encoding
+  * [x] secure server with session

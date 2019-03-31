@@ -117,9 +117,9 @@ Wi*thin*Words   - but not -   Wi_thin_Words
 
 *Emphasised* Text  === _Emphasised_ Text
 
-`monospaced` Text
+`Monospaced` Text
 
-~~strikethrough~~ Text
+~~Strikethrough~~ Text
 
 Wi*thin*Words   - but not -   Wi_thin_Words
 
@@ -229,7 +229,7 @@ Wi*thin*Words   - but not -   Wi_thin_Words
 10. Yellow
 ```
 
-> <span style="color: #f55;">**Note**: Wrong numbers get corrected into right order!</span>
+<span style="color: #f55;">**Note**: Wrong numbers get corrected into right order!</span>
 
 
 1. Red
@@ -242,7 +242,7 @@ Wi*thin*Words   - but not -   Wi_thin_Words
 
 <!--- -->
 
-40. Cyan <span style="color: #f55;">**Note:** Counting is restarted with 40 after <!--- --&gt;</span>
+40. Cyan <span style="color: #f55;">**Note:** Counting is restarted with 40 after &lt;!--- --&gt;</span>
    1. RGB (0, 255, 255)
    1. A color between green and blue
       * Green
@@ -390,16 +390,20 @@ img[alt=img100x] {width: 100px; border: 5px solid red; border-radius: 25%}
 
 Using plain html can be used to size images:
 
-    <img src="path_to/img.png" title="Optional Title" alt="Alt Text" style="width: 50px;">
+```html
+<img src="path_to/img.png" title="Optional Title" alt="Alt Text" style="width: 50px;">
+```
 
 <img src="path_to/img.png" title="Optional Title" alt="Alt Text" style="width: 50px;">
 
 Styling images can also be done by hijacking on the `alt` attribute.
 
-    <style>
-    img[alt=img100x] {width: 100px; border: 5px solid red; border-radius: 25%}
-    </style>
-    ![img100x](path_to/img.png)
+```html
+<style>
+img[alt=img100x] {width: 100px; border: 5px solid red; border-radius: 25%}
+</style>
+![img100x](path_to/img.png)
+```
 
 <style>
 img[alt=img100x] {width: 100px; border: 5px solid red; border-radius: 25%}
@@ -449,7 +453,7 @@ outputs:
 
 ## Inline HTML
 
-```
+```html
 <dl>
   <dt>A Definition List</dt>
   <dd>Mixing Markdown might **not** work *everywhere*. <br>
