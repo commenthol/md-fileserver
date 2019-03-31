@@ -59,7 +59,7 @@ Open <http://localhost:4000> in your browser and navigate to the markdown file.
 Alternatively type in your terminal:
 
 ```
-mdopen <file>
+mdstart <file>
 ```
 
 This will open the default browser with the processed markdown file.
@@ -67,7 +67,7 @@ This will open the default browser with the processed markdown file.
 ## Cheatsheet
 
 ```
-mdopen test/cheatsheet.md
+mdstart test/cheatsheet.md
 ```
 
 [Cheatsheet][]

@@ -9,10 +9,4 @@
     padding: 1em;
     box-shadow: unset;
   }
-  .markdown-body pre {
-    background-color: unset;
-    border-radius: 0.5rem;
-    border: 1px solid rgba(32,32,32,.1);
-    padding: .5rem .5rem;
-  }
 }

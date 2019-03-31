@@ -28,16 +28,10 @@ a.top {
 .markdown-body table {
   border-collapse: collapse;
 }
-.markdown-body pre code {
-  white-space: pre-wrap;
-}
 .markdown-body {
   font-size: 1em;
   line-height: 1.2;
   word-wrap: break-word;
-}
-.markdown-body pre {
-  margin: 0 0;
 }
 
 .markdown-body .task-list-item {
