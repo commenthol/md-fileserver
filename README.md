@@ -16,7 +16,7 @@ Starts a local server to render "markdown" files within your browser:
   * [KaTeX][]
 * Includes [markedpp][] as preprocessor.
 * Supports syntax highlighting using [highlight.js][]
-* For supported markdown Syntax see [Cheatsheet][].
+* For supported markdown syntax see [Cheatsheet][].
 * Automatic update in browser after saving edited file. (Tested on Linux, MacOS, Windows)
 
 ## Table of Contents
@@ -57,7 +57,7 @@ navigate to the markdown file.
 
 __Note__: The local server can only be reached from your local computer on port 4000.
 Any remote access from other computers to your files is denied.
-An internal session is used so you'll need to either start with a file or use the provided
+An internal session is used, so you'll need to either start with a file or use the provided
 link with the session parameter.
 
 ### Open a markdown file
@@ -65,7 +65,7 @@ link with the session parameter.
 Type in your terminal:
 
 ```
-mdstart <file>
+mdstart <file.md>
 ```
 
 This will open the default browser with the processed markdown file.
@@ -79,7 +79,7 @@ mdstart /config
 ## Cheatsheet
 
 ```
-mdstart test/cheatsheet.md
+mdstart /cheatsheet
 ```
 
 [Cheatsheet][]
@@ -89,7 +89,6 @@ mdstart test/cheatsheet.md
 In `config.js` you can change several settings to fit your needs. These include:
 
 * **Browser**: Default browser of MacOS, Linux or Windows is used.
-* **Style**: Styles are located in `./assets/`. Currently only a GFM like style is supported. Others are welcome.
 * **Markdown** options: Change the options how [markdown-it][] processes your markdown files.
 * **Markdown PP** options: Change the options how [markedpp][] pre-processes your markdown files.
 
@@ -115,7 +114,7 @@ all code is your original work.
 Copyright (c) 2014-present commenthol   
 Software is released under [MIT License][].
 
-Bundled fonts from [KaTeX][] by Khan Academy - https://github.com/Khan/KaTeX - 
+Bundled fonts from [KaTeX][] by Khan Academy - https://github.com/Khan/KaTeX -
 [License](https://github.com/KaTeX/KaTeX/blob/master/LICENSE) (Fonts: SIL OFL 1.1, Code: MIT License)
 
 ## References

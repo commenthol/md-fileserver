@@ -1,7 +1,13 @@
+/*!
+ * From Primer-product modified
+ * http://primer.github.io
+ *
+ * Released under MIT license. Copyright (c) 2019 GitHub Inc.
+ */
 .markdown-body {
     font-size: 15px;
     font-family: BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
-    line-height: 1.7;
+    line-height: 1.5;
     overflow: hidden;
     word-wrap: break-word
 }

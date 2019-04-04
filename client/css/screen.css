@@ -29,11 +29,8 @@ a.top {
   border-collapse: collapse;
 }
 .markdown-body {
-  font-size: 1em;
-  line-height: 1.2;
   word-wrap: break-word;
 }
-
 .markdown-body .task-list-item {
   list-style: none;
 }
@@ -42,9 +39,6 @@ a.top {
   vertical-align: middle;
 }
 
-x-toc li {
-  list-style: none outside none;
-}
 x-error {
   background: none repeat scroll 0 0 #f00;
   color: #fff;
