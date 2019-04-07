@@ -28,6 +28,7 @@ This cheatsheet uses markdown syntax based on:
   * [Inline HTML](#inline-html)
   * [Inline Comments](#inline-comments)
 * [Extensions](#extensions)
+  * [Styles](#styles)
   * [Emoji](#emoji)
   * [Tasklists](#tasklists)
   * [Footnotes](#footnotes)
@@ -36,6 +37,8 @@ This cheatsheet uses markdown syntax based on:
   * [Include other files](#include-other-files)
   * [Table of Contents](#table-of-contents-1)
   * [Reference list](#reference-list)
+
+!toc (level=4)
 
 ## Headers
 
@@ -478,6 +481,16 @@ This is a comment (NOTE the 3 <!--- dashes)
 -->
 
 # Extensions
+
+## Styles
+
+### &lt;kbd>
+
+```
+Press <kbd>Ctrl</kbd> + <kbd>R</kbd> or <kbd>F5</kbd>
+```
+
+Press <kbd>Ctrl</kbd> + <kbd>R</kbd> or <kbd>F5</kbd>
 
 ## Emoji
 

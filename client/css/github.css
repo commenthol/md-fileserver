@@ -121,9 +121,9 @@
     margin: 15px 0
 }
 .markdown-body hr {
-    background-color: #e1e4e8;
+    background-color: #ddd;
     border: 0;
-    height: .25em;
+    height: 2px;
     margin: 24px 0;
     padding: 0;
 }
@@ -185,7 +185,8 @@
     border-top: 1px solid #ccc;
     background-color: #fff
 }
-.markdown-body table tr:nth-child(2n) {
+.markdown-body table th {
+    /* .markdown-body table tr:nth-child(2n) */
     background-color: #f8f8f8
 }
 .markdown-body img {
@@ -270,8 +271,12 @@
 .markdown-body code,
 .markdown-body pre,
 .markdown-body tt {
-    border-radius: 3px;
-    font-size: 90%;
+  border-radius: 3px;
+  font-size: 0.85rem;
+}
+.markdown-body code:not(.hljs) {
+  background-color: #f8f8f8;
+  padding: .2em 0em;
 }
 .markdown-body code:before,
 .markdown-body code:after,

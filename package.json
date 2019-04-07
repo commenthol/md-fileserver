@@ -19,7 +19,6 @@
   "author": "commenthol",
   "main": "lib/index.js",
   "bin": {
-    "mdopen": "./bin/cli.js",
     "mdstart": "./bin/cli.js"
   },
   "man": "./man/mdstart.1",
