@@ -2,9 +2,11 @@
 /tmp
 /coverage
 /scripts
+/client
 /test/*.js
 /test/test.md
 /test/mocha.opts
+/assets/*.hot-update.js*
 .*
 *.log
 *.tgz

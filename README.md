@@ -96,7 +96,7 @@ Install personalized version:
 
 1.  Clone this repo
     ````
-    git clone https://github.com/commenthol/md-fileserver.git
+    git clone --depth 2 https://github.com/commenthol/md-fileserver.git
     cd md-fileserver
     ````
 2.  Make your changes in `./config.js`

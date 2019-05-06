@@ -14,7 +14,6 @@ const conf = {
   },
   mode: 'development',
   devtool: 'source-map',
-
   module: {
     rules: [
       {
