@@ -49,7 +49,15 @@ isPortOpen(cmd, (isOpen) => {
         filename2uri(path.resolve(process.cwd(), cmd.file)) + `?session=${token}`
       const [exe, ...args] = cmd.browser
       args.push(url)
-      child.spawn(exe, args)
+      const www = child.spawn(exe, args)
+      www.on('error', (err) => {
+        if (err.code === 'ENOENT') {
+          console.log(`\n` +
+            `    Error: Starting browser with "${exe}" failed.\n` +
+            `    Open: ${url}\n`
+          )
+        }
+      })
     }, isOpen ? 0 : 250)
   }
 })
