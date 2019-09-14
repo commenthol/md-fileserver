@@ -19,7 +19,7 @@ const argv = () => {
     if (['-p', '--port'].includes(arg)) {
       cmd.port = parseInt(argv.shift(), 10)
     } else if (['-b', '--browser'].includes(arg)) {
-      cmd.browser = [ argv.shift() ]
+      cmd.browser = [argv.shift()]
     } else if (['-h', '--help'].includes(arg)) {
       help()
     } else if (['--version'].includes(arg)) {
@@ -52,7 +52,7 @@ isPortOpen(cmd, (isOpen) => {
       const www = child.spawn(exe, args)
       www.on('error', (err) => {
         if (err.code === 'ENOENT') {
-          console.log(`\n` +
+          console.log('\n' +
             `    Error: Starting browser with "${exe}" failed.\n` +
             `    Open: ${url}\n`
           )

@@ -14,18 +14,21 @@ class Handler {
     }, 1000)
     this.interval.set()
   }
+
   /**
    * @param {WebSocket} conn - socket connection
    */
   set connection (conn) {
     this._conn = conn
   }
+
   /**
    * @param {Dispatcher} dispatch
    */
   set dispatcher (dispatch) {
     this._dispatch = dispatch
   }
+
   /**
    * @param {Boolean} isRx
    */
@@ -41,12 +44,14 @@ class Handler {
       el.classList.add('slave')
     }
   }
+
   /**
    * @returns {Boolean}
    */
   get isSlave () {
     return this._isSlave
   }
+
   /**
    * @param {Object} msg
    */
@@ -54,6 +59,7 @@ class Handler {
     const { _dispatch } = this
     if (_dispatch) _dispatch.dispatch(msg)
   }
+
   /**
    * @param {Object} msg
    */
@@ -63,6 +69,7 @@ class Handler {
       _conn.send(JSON.stringify(msg))
     }
   }
+
   close () {
     const { _conn } = this
     this.interval.clear()
@@ -70,6 +77,7 @@ class Handler {
       _conn.close()
     }
   }
+
   sendScroll () {
     const top = window.scrollY / document.body.clientHeight
     const left = window.scrollX / document.body.clientWidth

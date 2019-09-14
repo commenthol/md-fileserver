@@ -24,7 +24,7 @@ const conf = {
           options: {
             presets: ['@babel/preset-env'],
             plugins: [
-              ['@babel/plugin-transform-react-jsx', { 'pragma': 'h' }],
+              ['@babel/plugin-transform-react-jsx', { pragma: 'h' }],
               '@babel/plugin-proposal-class-properties'
             ]
           }
@@ -38,7 +38,8 @@ const conf = {
       }, {
         test: /\.(png|jpg|gif)$/i,
         use: [
-          { loader: 'url-loader',
+          {
+            loader: 'url-loader',
             options: {
               limit: 8192,
               name: 'imgs/[name][hash].[ext]'
@@ -67,7 +68,7 @@ const conf = {
   devServer: {
     // host: '0.0.0.0',
     hot: true,
-    contentBase: [`./${outDir}`, `./test/html`]
+    contentBase: [`./${outDir}`, './test/html']
   }
 }
 
