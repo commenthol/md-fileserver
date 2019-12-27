@@ -43,12 +43,19 @@ input:not([type=checkbox]) {
 
 <input id="filterMd" name="filter" type="checkbox" <%= filter ? 'checked' : '' %>>
 <label for="filterMd">Show only markdown files in directory list</label>
+<br>
+
+<input id="confluencer" name="confluencer" type="checkbox" <%= confluencer ? 'checked' : '' %>>
+<label for="confluencer">Use <a href="https://npmjs.com/package/confluencer">confluencer</a></label>
+<br>
+
+<input id="confluenceHtml" name="confluenceHtml" type="checkbox" <%= confluenceHtml ? 'checked' : '' %>>
+<label for="confluenceHtml">Display Confluence html</label>
+<br>
 
 <label for="style">highlight.js style</label>
 <br>
-<select id="styles" name="highlight">
-  <% for (var style of styles) { %><option value="<%- style %>" <%= template.highlight == style ? 'selected' : '' %>><%- style %></option><% } %>
-</select>
+<select id="styles" name="highlight"><% for (var style of styles) { %><option value="<%- style %>" <%= template.highlight == style ? 'selected' : '' %>><%- style %></option><% } %></select>
 
 <button type="submit">Submit</button>
 
