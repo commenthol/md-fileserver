@@ -36,6 +36,10 @@ const cmd = argv()
 isPortOpen(cmd, (isOpen) => {
   const startBrowser = cmd.file && cmd.browser
 
+  const token = appConfig.token()
+  const url = `http://${config.hostname}:${cmd.port}` +
+    filename2uri(path.resolve(process.cwd(), cmd.file || '')) + `?session=${token}`
+
   if (!isOpen) {
     require('../lib').start({ port: cmd.port, quiet: startBrowser })
     // child.execFile('node', [path.resolve(__dirname, 'start.js')],
@@ -44,9 +48,6 @@ isPortOpen(cmd, (isOpen) => {
 
   if (startBrowser) {
     setTimeout(function () {
-      const token = appConfig.token()
-      const url = `http://${config.hostname}:${cmd.port}` +
-        filename2uri(path.resolve(process.cwd(), cmd.file)) + `?session=${token}`
       const [exe, ...args] = cmd.browser
       args.push(url)
       const www = child.spawn(exe, args)
@@ -59,6 +60,9 @@ isPortOpen(cmd, (isOpen) => {
         }
       })
     }, isOpen ? 0 : 250)
+  } else {
+    console.log('\n' +
+      `    Open: ${url}\n`)
   }
 })
 

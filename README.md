@@ -19,6 +19,7 @@ Starts a local server to render "markdown" files within your browser:
 * Supports syntax highlighting using [highlight.js][]
 * For supported markdown syntax see [Cheatsheet][].
 * Automatic update in browser after saving edited file. (Tested on Linux, MacOS, Windows)
+* Support for [confluencer][]. Needs to be enabled in `/config`.
 
 ## Table of Contents
 
@@ -29,6 +30,7 @@ Starts a local server to render "markdown" files within your browser:
   * [Start the Local Server](#start-the-local-server)
   * [Open a markdown file](#open-a-markdown-file)
 * [Configuration](#configuration)
+* [Help](#help)
 * [Cheatsheet](#cheatsheet)
 * [Personalisation](#personalisation)
 * [Contribution](#contribution)
@@ -75,6 +77,18 @@ This will open the default browser with the processed markdown file.
 
 ```
 mdstart /config
+```
+
+![](./man/config.jpg)
+
+## Help
+
+```
+mdstart --help
+```
+or
+```
+man mdstart
 ```
 
 ## Cheatsheet
@@ -124,6 +138,7 @@ Bundled fonts from [KaTeX][] by Khan Academy - https://github.com/Khan/KaTeX -
 <!-- !ref -->
 
 * [Cheatsheet][Cheatsheet]
+* [confluencer][confluencer]
 * [GFM][GFM]
 * [highlight.js][highlight.js]
 * [KaTeX][KaTeX]
@@ -136,7 +151,8 @@ Bundled fonts from [KaTeX][] by Khan Academy - https://github.com/Khan/KaTeX -
 <!-- ref! -->
 
 [KaTeX]: https://katex.org/
-[MultiMarkdown table syntax]: https://www.npmjs.com/package/markdown-it-multimd-table
+[MultiMarkdown table syntax]: https://npmjs.com/package/markdown-it-multimd-table
+[confluencer]: https://npmjs.com/package/confluencer
 [Cheatsheet]: test/cheatsheet.md
 [GFM]: https://help.github.com/articles/github-flavored-markdown
 [highlight.js]: http://highlightjs.org
