@@ -10,10 +10,10 @@ const appConfig = require('../lib/appConfig')()
 
 const argv = () => {
   const argv = process.argv.slice(2)
-  const cmd = {
+  const cmd = Object.assign({
     browser: config.browser[process.platform],
     port: config.port
-  }
+  }, appConfig.config)
   while (argv.length) {
     const arg = argv.shift()
     if (['-p', '--port'].includes(arg)) {
