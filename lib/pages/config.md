@@ -39,7 +39,7 @@ input:not([type=checkbox]) {
 <form method="post" action="/config">
 
 <label for="port">Port</label> <small>requires restart</small><br>
-<input id="port" name="port" type="number" min="1000" max="5000" value="<%= port %>">
+<input id="port" name="port" type="number" min="1000" max="65535" value="<%= port %>">
 
 <input id="filterMd" name="filter" type="checkbox" <%= filter ? 'checked' : '' %>>
 <label for="filterMd">Show only markdown files in directory list</label>
