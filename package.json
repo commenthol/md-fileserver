@@ -54,6 +54,7 @@
     "markdown-it-footnote": "^3.0.2",
     "markdown-it-highlightjs": "https://github.com/commenthol/markdown-it-highlightjs.git#semver:^3.1.0-0",
     "markdown-it-katex": "^2.0.3",
+    "markdown-it-multimd-table": "^4.0.1",
     "markdown-it-task-lists": "^2.1.1",
     "markedpp": "^1.0.1",
     "semver-dedupe": "^1.1.1",
