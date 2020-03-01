@@ -28,6 +28,8 @@ var config = {
     linkify: true,
     typographer: false
   },
+  confluencer: false, // disable confluencer by default
+  confluenceHtml: false, // use confluence html if enabled
   /// add `markdown-it` plugins
   markdownItPlugins: function (parser) {
     return parser
