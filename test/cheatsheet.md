@@ -33,6 +33,7 @@ This cheatsheet uses markdown syntax based on:
   * [Tasklists](#tasklists)
   * [Footnotes](#footnotes)
   * [Math with KaTeX](#math-with-katex)
+  * [MultiMarkdown table syntax](#multimarkdown-table-syntax)
 * [Preprocessor](#preprocessor)
   * [Include other files](#include-other-files)
   * [Table of Contents](#table-of-contents-1)
@@ -569,6 +570,101 @@ $$\int_0^1 x^n dx = \frac{1}{n+1}$$
 When $a \ne 0$, there are two solutions to $(ax^2 + bx + c = 0)$ and they are
 
 $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}$$
+
+## MultiMarkdown table syntax
+
+Provided by [markdown-it-multimd-table](https://github.com/RedBug312/markdown-it-multimd-table).
+
+**Grouping**
+
+    |             |          Grouping           ||
+    First Header  | Second Header | Third Header |
+     ------------ | :-----------: | -----------: |
+    Content       |          *Long Cell*        ||
+    Content       |   **Cell**    |         Cell |
+
+    New section   |     More      |         Data |
+    And more      | With an escaped '\\|'       ||
+    [Prototype table]
+
+|             |          Grouping           ||
+First Header  | Second Header | Third Header |
+ ------------ | :-----------: | -----------: |
+Content       |          *Long Cell*        ||
+Content       |   **Cell**    |         Cell |
+
+New section   |     More      |         Data |
+And more      | With an escaped '\\|'       ||
+[Prototype table]
+
+**Multiline**
+
+    |   Markdown   | Rendered HTML |
+    |--------------|---------------|
+    |    *Italic*  | *Italic*      | \
+    |              |               |
+    |    - Item 1  | - Item 1      | \
+    |    - Item 2  | - Item 2      |
+    |    ```python | ```python       \
+    |    .1 + .2   | .1 + .2         \
+    |    ```       | ```           |
+
+|   Markdown   | Rendered HTML |
+|--------------|---------------|
+|    *Italic*  | *Italic*      | \
+|              |               |
+|    - Item 1  | - Item 1      | \
+|    - Item 2  | - Item 2      |
+|    ```python | ```python       \
+|    .1 + .2   | .1 + .2         \
+|    ```       | ```           |
+
+**Rowspan**
+
+    Stage              | Direct Products | ATP Yields
+    -----------------: | --------------: | ---------:
+    Glycolysis         | 2 ATP           ||
+    ^^                 | 2 NADH          | 3--5 ATP |
+    Pyruvaye oxidation | 2 NADH          | 5 ATP |
+    Citric acid cycle  | 2 ATP           ||
+    ^^                 | 6 NADH          | 15 ATP |
+    ^^                 | 2 FADH2         | 3 ATP |
+    **30--32** ATP     |||
+    [Net ATP yields per hexose]
+
+Stage              | Direct Products | ATP Yields
+-----------------: | --------------: | ---------:
+Glycolysis         | 2 ATP           ||
+^^                 | 2 NADH          | 3--5 ATP |
+Pyruvaye oxidation | 2 NADH          | 5 ATP |
+Citric acid cycle  | 2 ATP           ||
+^^                 | 6 NADH          | 15 ATP |
+^^                 | 2 FADH2         | 3 ATP |
+**30--32** ATP     |||
+[Net ATP yields per hexose]
+
+**Headerless**
+
+    |--|--|--|--|--|--|--|--|
+    |♜ |  |♝ |♛ |♚ |♝ |♞ |♜ |
+    |  |♟ |♟ |♟ |  |♟ |♟ |♟ |
+    |♟ |  |♞ |  |  |  |  |  |
+    |  |♗ |  |  |♟ |  |  |  |
+    |  |  |  |  |♙ |  |  |  |
+    |  |  |  |  |  |♘ |  |  |
+    |♙ |♙ |♙ |♙ |  |♙ |♙ |♙ |
+    |♖ |♘ |♗ |♕ |♔ |  |  |♖ |
+
+|--|--|--|--|--|--|--|--|
+|♜ |  |♝ |♛ |♚ |♝ |♞ |♜ |
+|  |♟ |♟ |♟ |  |♟ |♟ |♟ |
+|♟ |  |♞ |  |  |  |  |  |
+|  |♗ |  |  |♟ |  |  |  |
+|  |  |  |  |♙ |  |  |  |
+|  |  |  |  |  |♘ |  |  |
+|♙ |♙ |♙ |♙ |  |♙ |♙ |♙ |
+|♖ |♘ |♗ |♕ |♔ |  |  |♖ |
+
 
 # Preprocessor
 

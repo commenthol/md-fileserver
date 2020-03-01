@@ -14,6 +14,7 @@ Starts a local server to render "markdown" files within your browser:
   * Task lists
   * Footnotes
   * [KaTeX][]
+  * [MultiMarkdown table syntax][]
 * Includes [markedpp][] as preprocessor.
 * Supports syntax highlighting using [highlight.js][]
 * For supported markdown syntax see [Cheatsheet][].
@@ -94,14 +95,15 @@ In `config.js` you can change several settings to fit your needs. These include:
 
 Install personalized version:
 
-1.  Clone this repo
-    ````
-    git clone --depth 2 https://github.com/commenthol/md-fileserver.git
-    cd md-fileserver
-    ````
-2.  Make your changes in `./config.js`
-3.  Install with `npm i -g` from same folder.  
-    If there are issues with installing you'll need to uninstall first with `npm un -g`
+1. Clone this repo
+   ````
+   git clone --depth 2 https://github.com/commenthol/md-fileserver.git
+   cd md-fileserver
+   ````
+
+2. Make your changes in `./config.js`
+3. Install with `npm i -g` from same folder.  
+   If there are issues with installing you'll need to uninstall first with `npm un -g`
 
 ## Contribution
 
@@ -124,14 +126,17 @@ Bundled fonts from [KaTeX][] by Khan Academy - https://github.com/Khan/KaTeX -
 * [Cheatsheet][Cheatsheet]
 * [GFM][GFM]
 * [highlight.js][highlight.js]
-* [KaTeX][]
+* [KaTeX][KaTeX]
 * [Markdown Syntax][Markdown Syntax]
+* [markdown-it][markdown-it]
 * [markedpp][markedpp]
 * [MIT License][MIT License]
+* [MultiMarkdown table syntax][MultiMarkdown table syntax]
 
 <!-- ref! -->
 
 [KaTeX]: https://katex.org/
+[MultiMarkdown table syntax]: https://www.npmjs.com/package/markdown-it-multimd-table
 [Cheatsheet]: test/cheatsheet.md
 [GFM]: https://help.github.com/articles/github-flavored-markdown
 [highlight.js]: http://highlightjs.org
