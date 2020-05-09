@@ -22,11 +22,19 @@ class Handler {
     this._conn = conn
   }
 
+  get connection () {
+    return this._conn
+  }
+
   /**
    * @param {Dispatcher} dispatch
    */
   set dispatcher (dispatch) {
     this._dispatch = dispatch
+  }
+
+  get dispatcher () {
+    return this._dispatch
   }
 
   /**

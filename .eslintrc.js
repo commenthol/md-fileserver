@@ -1,7 +1,7 @@
 module.exports = {
-  extends: "standard",
+  extends: 'standard',
   env: {
     browser: true,
     mocha: true
   }
-};
+}
