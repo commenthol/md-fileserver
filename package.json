@@ -32,7 +32,7 @@
     "clean": "rimraf assets/fonts assets/index* assets/*.hot-update.js* .nyc_output coverage *.tgz",
     "coverage": "nyc -r html -r text npm test",
     "dev": "webpack -w",
-    "postinstall": "semver-dedupe katex",
+    "postinstall": "semver-dedupe katex@^0.6 markdown-it@^8 highlight.js@^9",
     "lint": "eslint \"**/*.js\"",
     "man": "ronn -r man/mdstart.md && man man/mdstart.1 > man/mdstart.txt",
     "prepublishOnly": "npm run all",
