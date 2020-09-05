@@ -40,6 +40,9 @@
     "test": "mocha",
     "test:md": "bin/mdstart.js test/cheatsheet.md"
   },
+  "mocha": {
+    "exit": true
+  },
   "dependencies": {
     "asyncc": "^2.0.4",
     "body-parser": "^1.19.0",
