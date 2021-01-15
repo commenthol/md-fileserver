@@ -44,6 +44,7 @@
     "exit": true
   },
   "dependencies": {
+    "@commenthol/markdown-it-katex": "^2.0.4",
     "asyncc": "^2.0.4",
     "body-parser": "^1.19.0",
     "confluencer": "^1.2.1",
@@ -57,7 +58,6 @@
     "markdown-it-emoji": "^2.0.0",
     "markdown-it-footnote": "^3.0.2",
     "markdown-it-highlightjs": "^3.3.0",
-    "markdown-it-katex": "^2.0.3",
     "markdown-it-multimd-table": "^4.0.3",
     "markdown-it-task-lists": "^2.1.1",
     "markedpp": "^1.0.2",

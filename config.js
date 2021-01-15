@@ -42,7 +42,7 @@ var config = {
         rowspan: true,
         headerless: true
       })
-      .use(require('markdown-it-katex'))
+      .use(require('@commenthol/markdown-it-katex'))
     // .use(require(other-plugin), {/* options */})
   },
   /// template settings
