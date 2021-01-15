@@ -1,6 +1,6 @@
 'use strict'
 
-var config = {
+const config = {
   /// host
   // host: '127.0.0.1',
   hostname: 'localhost',

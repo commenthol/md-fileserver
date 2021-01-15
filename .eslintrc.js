@@ -3,5 +3,8 @@ module.exports = {
   env: {
     browser: true,
     mocha: true
+  },
+  rules: {
+    'node/no-path-concat': 'off'
   }
 }
