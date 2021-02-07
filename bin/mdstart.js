@@ -13,13 +13,19 @@ const argv = () => {
   const cmd = Object.assign({
     browser: config.browser[process.platform],
     port: config.port
-  }, appConfig.config)
+  }, appConfig.config, {
+    confluencer: undefined,
+    confluenceHtml: undefined
+  })
   while (argv.length) {
     const arg = argv.shift()
     if (['-p', '--port'].includes(arg)) {
       cmd.port = parseInt(argv.shift(), 10)
     } else if (['-b', '--browser'].includes(arg)) {
       cmd.browser = [argv.shift()]
+    } else if (['-c', '--confluence'].includes(arg)) {
+      cmd.confluencer = true
+      cmd.confluenceHtml = true
     } else if (['-h', '--help'].includes(arg)) {
       help()
     } else if (['--version'].includes(arg)) {
@@ -41,7 +47,8 @@ isPortOpen(cmd, (isOpen) => {
     filename2uri(path.resolve(process.cwd(), cmd.file || '')) + `?session=${token}`
 
   if (!isOpen) {
-    require('../lib').start({ port: cmd.port, quiet: startBrowser })
+    const { port, confluencer, confluenceHtml } = cmd
+    require('../lib').start({ port, confluencer, confluenceHtml, quiet: startBrowser })
     // child.execFile('node', [path.resolve(__dirname, 'start.js')],
     //   isWin32 ? { windowsHide: true, shell: true } : void 0)
   }

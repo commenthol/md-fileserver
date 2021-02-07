@@ -5,7 +5,7 @@ const assert = require('assert')
 const request = require('supertest')
 const { filename2uri, homedir } = require('../lib/utils')
 
-const { app, start, appConfig } = require('..')
+const { setupApp, start, appConfig } = require('..')
 
 describe('md-fileserver', function () {
   let agent
@@ -13,7 +13,7 @@ describe('md-fileserver', function () {
   beforeEach(function () {
     const token = appConfig.token()
     assert.ok(token, `got token ${token}`)
-    agent = request.agent(app)
+    agent = request.agent(setupApp())
     return agent.get(`/?session=${token}`)
       .expect('set-cookie', new RegExp(`session=${token};`))
   })
@@ -87,7 +87,7 @@ describe('md-fileserver', function () {
     })
 
     it('should reject with 403 if there is no session', function () {
-      return request(app)
+      return request(setupApp())
         .get(filename2uri(resolve(__dirname, 'cheatsheet.md')))
         .expect(403, /Access forbidden/)
     })

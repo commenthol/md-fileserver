@@ -1,4 +1,4 @@
-MDSTART(1)                                                                                                                    MDSTART(1)
+MDSTART(1)                                                        General Commands Manual                                                       MDSTART(1)
 
 NAME
        mdstart - Locally view markdown files in a browser
@@ -9,21 +9,21 @@ SYNOPSIS
 DESCRIPTION
        Starts a local server to render "markdown" files within your browser:
 
-       ·   Runs on localhost:4000
+       ○   Runs on localhost:4000
 
-       ·   Supports Markdown Syntax http://daringfireball.net/projects/markdown/syntax
+       ○   Supports Markdown Syntax http://daringfireball.net/projects/markdown/syntax
            with GFM https://help.github.com/articles/github-flavored-markdown.
 
-       ·   Markdown rendering based on markdown-it https://github.com/markdown-it/markdown-it.
+       ○   Markdown rendering based on markdown-it https://github.com/markdown-it/markdown-it.
            Enabled Plugins for: Emojis, Task lists, Footnotes, KaTeX https://katex.org/
 
-       ·   Includes markedpp https://github.com/commenthol/markedpp as preprocessor.
+       ○   Includes markedpp https://github.com/commenthol/markedpp as preprocessor.
 
-       ·   Supports syntax highlighting using highlight.js http://highlightjs.org
+       ○   Supports syntax highlighting using highlight.js http://highlightjs.org
 
-       ·   For supported markdown Syntax see the Cheatsheet.
+       ○   For supported markdown syntax see the Cheatsheet.
 
-       ·   Automatic update in browser after saving edited file. (Tested on Linux, MacOS, Windows)
+       ○   Automatic update in browser after saving edited file. (Tested on Linux, MacOS, Windows)
 
 OPTIONS
        -h, --help
@@ -37,6 +37,9 @@ OPTIONS
 
        -b, --browser <exe>
               Use a different browser executable.
+
+       -c, --confluence
+              Generate confluence html. Copy and paste the rendered output into a editor window at confluence. Images need manual upload.
 
 EXAMPLES
        Start the server:
@@ -72,4 +75,4 @@ COPYRIGHT
 REPORTING BUGS
        md-fileserver repository https://github.com/commenthol/md-fileserver/issues
 
-                                                               April 2019                                                     MDSTART(1)
+                                                                       February 2021                                                            MDSTART(1)

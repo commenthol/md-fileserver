@@ -33,6 +33,11 @@ Starts a local server to render "markdown" files within your browser:
 * `-b`, `--browser` `<exe>`:
   Use a different browser executable.
 
+* `-c`, `--confluence` :
+  Generate confluence html. Copy and paste the rendered output into a editor
+  window at confluence.
+  Images need manual upload.
+
 ## EXAMPLES
 
 Start the server:

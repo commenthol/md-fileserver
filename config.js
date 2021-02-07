@@ -33,7 +33,17 @@ const config = {
   /// add `markdown-it` plugins
   markdownItPlugins: function (parser) {
     return parser
-      .use(require('markdown-it-highlightjs'), { auto: false })
+      .use(require('markdown-it-highlightjs'), {
+        auto: false,
+        register: {
+          plantuml: (hljs) => ({
+            name: 'plantuml',
+            aliases: ['!plantuml', '!plantuml(format=svg)', '!plantuml(format=png)'],
+            keywords: [],
+            contains: []
+          })
+        }
+      })
       .use(require('markdown-it-emoji'))
       .use(require('markdown-it-task-lists'))
       .use(require('markdown-it-footnote'))
