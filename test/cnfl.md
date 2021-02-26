@@ -8,10 +8,19 @@
 
 <img src="http://placekitten.com/200/300" width="200" alt="kitten" align="center">
 
-
 ## footnotes
 
 This is a [^footnote].
+
+## colored text
+
+<font color="red">text in red</font>
+
+<font color="#0000ff">text in blue</font>
+
+## {toc}
+
+!toc
 
 ## {anchor}
 
