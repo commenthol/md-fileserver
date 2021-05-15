@@ -79,7 +79,7 @@ With Title
 
 No title
 
-``!warning(This is the warning title)
+``!warning
 
 - Warning
 - And here is some text
@@ -118,7 +118,7 @@ This is just a text clock
 
 ## {plantuml}
 
-```!plantuml(format=svg)
+```!plantuml
 @startuml
 
 ' Write your plantuml code as usual...
