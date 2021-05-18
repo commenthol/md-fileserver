@@ -39,7 +39,7 @@ This cheatsheet uses markdown syntax based on:
   * [Table of Contents](#table-of-contents-1)
   * [Reference list](#reference-list)
 
-!toc (level=4)
+<!-- toc (level=4) -->
 
 ## Headers
 
