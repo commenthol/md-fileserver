@@ -1,4 +1,23 @@
+
+# Confluence Macros
+
+!!! note
+    
+    Needs "(X) Use confluencer" set in [/config](/config).
+
+
+This sets "Display Confluence html" mode.
+
+```
+!confluence
+```
+
 ! confluence
+
+## {toc}&nbsp;
+
+!toc
+
 
 ## image
 
@@ -8,9 +27,13 @@
 
 <img src="http://placekitten.com/200/300" width="200" alt="kitten" align="center">
 
+
 ## footnotes
 
-This is a [^footnote].
+This is a footnote[^footnote].
+
+[^footnote]: the footnote text
+
 
 ## colored text
 
@@ -18,11 +41,9 @@ This is a [^footnote].
 
 <font color="#0000ff">text in blue</font>
 
-## {toc}
 
-!toc
 
-## {anchor}
+## {anchor}&nbsp;
 
 Write your [cross-references](#cross-ref) as with markdown...
 
@@ -34,13 +55,15 @@ Write your [cross-references](#cross-ref) as with markdown...
 
 <a name="cross-ref"></a>
 
-## {status}
+
+## {status}&nbsp;
 
 This shall render a !status(STATUS) macro.
 
 In !status(color=Red RED) !status(color=Yellow YELLOW) !status(color=Blue Blue) !status(color=Green GREEN)...
 
-## {note}
+
+## {note}&nbsp;
 
 > Note the TWO backticks ``
 
@@ -51,7 +74,8 @@ In !status(color=Red RED) !status(color=Yellow YELLOW) !status(color=Blue Blue) 
 
 ``
 
-## {info}
+
+## {info}&nbsp;
 
 > Note the TWO backticks ``
 
@@ -73,7 +97,8 @@ With Title
 
 ``
 
-## {warning}
+
+## {warning}&nbsp;
 
 > Note the TWO backticks ``
 
@@ -95,7 +120,8 @@ With title
 
 ``
 
-## {code}
+
+## {code}&nbsp;
 
 > Note the THREE backticks ```
 
@@ -116,7 +142,8 @@ This is just a text clock
 - three
 ```
 
-## {plantuml}
+
+## {plantuml}&nbsp;
 
 ```!plantuml
 @startuml
@@ -147,4 +174,3 @@ Charly --> Alice
 @enduml
 ```
 
-[^footnote]: the footnote text
