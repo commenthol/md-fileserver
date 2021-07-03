@@ -33,6 +33,12 @@ const config = {
   /// add `markdown-it` plugins
   markdownItPlugins: function (parser) {
     return parser
+      .use(require('markdown-it-abbr'))
+      .use(require('markdown-it-admon'))
+      .use(require('markdown-it-attrs'))
+      .use(require('markdown-it-emoji'))
+      .use(require('markdown-it-deflist'))
+      .use(require('markdown-it-footnote'))
       .use(require('markdown-it-highlightjs'), {
         auto: false,
         register: {
@@ -44,15 +50,16 @@ const config = {
           })
         }
       })
-      .use(require('markdown-it-emoji'))
-      .use(require('markdown-it-task-lists'))
-      .use(require('markdown-it-footnote'))
+      .use(require('@commenthol/markdown-it-katex'))
+      .use(require('markdown-it-mark'))
       .use(require('markdown-it-multimd-table'), {
         multiline: true,
         rowspan: true,
         headerless: true
       })
-      .use(require('@commenthol/markdown-it-katex'))
+      .use(require('markdown-it-task-lists'))
+      .use(require('markdown-it-sub'))
+      .use(require('markdown-it-sup'))
     // .use(require(other-plugin), {/* options */})
   },
   /// template settings

@@ -4,6 +4,7 @@ This cheatsheet uses markdown syntax based on:
 
 * [Markdown Specification][]
 * [Github Flavored Markdown][]
+* [Markdown-it Parser Extensions](#extensions)
 
 ## Table of Contents
 
@@ -29,11 +30,18 @@ This cheatsheet uses markdown syntax based on:
   * [Inline Comments](#inline-comments)
 * [Extensions](#extensions)
   * [Styles](#styles)
+  * [Abbreviation](#abbreviation)
+  * [Admonitions](#admonitions)
+  * [Attributes](#attributes)
+  * [Definition Lists](#definition-lists)
   * [Emoji](#emoji)
-  * [Tasklists](#tasklists)
   * [Footnotes](#footnotes)
   * [Math with KaTeX](#math-with-katex)
+  * [Mark](#mark)
   * [MultiMarkdown table syntax](#multimarkdown-table-syntax)
+  * [Subscript](#subscript)
+  * [Superscript](#superscript)
+  * [Tasklists](#tasklists)
 * [Preprocessor](#preprocessor)
   * [Include other files](#include-other-files)
   * [Table of Contents](#table-of-contents-1)
@@ -493,9 +501,187 @@ Press <kbd>Ctrl</kbd> + <kbd>R</kbd> or <kbd>F5</kbd>
 
 Press <kbd>Ctrl</kbd> + <kbd>R</kbd> or <kbd>F5</kbd>
 
+
+## Abbreviation
+
+Provided by [markdown-it-abbr](https://www.npmjs.com/package/markdown-it-abbr).
+
+```
+*[HTML]: Hyper Text Markup Language
+*[W3C]:  World Wide Web Consortium
+The HTML specification
+is maintained by the W3C.
+```
+
+*[HTML]: Hyper Text Markup Language
+*[W3C]:  World Wide Web Consortium
+The HTML specification
+is maintained by the W3C.
+
+
+## Admonitions
+
+See [markdown-it-admon](https://npmjs.org/package/markdown-it-admon) for supported admonitions.
+
+```
+!!! note 
+    A note with some text
+```
+
+!!! note
+    A note with some text
+
+
+```
+!!! warning Warning with custom Title
+    *Here be dragons!*
+```
+
+!!! warning Warning with custom title
+    *Here be dragons!*
+
+
+````
+!!! info nested admonitions
+    An info box
+
+    !!! snippet
+
+        ```js
+        console.log('Hello World')
+        ```
+
+    !!! tip ""
+        This box has not title.
+
+
+Two empty lines auto-close
+````
+
+
+!!! info nested admonitions
+    An info box
+
+    !!! snippet
+
+        ```js
+        console.log('Hello World')
+        ```
+
+    !!! tip ""
+        This box has not title.
+
+
+The following admonition types are supported:
+
+- `note`,
+- `summary`, `abstract`, `tldr`,
+- `info`, `todo`,
+- `tip`, `hint`,
+- `success`, `check`, `done`,
+- `question`, `help`, `faq`,
+- `warning`, `attention`, `caution`,
+- `failure`, `fail`, `missing`,
+- `danger`, `error`, `bug`,
+- `example`, `snippet`,
+- `quote`, `cite`
+
+however, you’re free to use whatever you want
+
+
+
+
+## Attributes
+
+Provided by [markdown-it-attrs](https://npmjs.org/package/markdown-it-attrs).
+
+````
+<style>
+.style-me { color: magenta; border: 1px solid cyan; padding: 0 0.25em; }
+.red { color: red; }
+.border { border: 2px solid grey; }
+</style>
+#### header {.style-me}
+
+paragraph {data-toggle=modal .style-me} 
+
+paragraph *style me*{.red} more text
+
+```python {.border}
+nums = [x for x in range(10)]
+```
+````
+
+<style>
+.style-me { color: magenta; border: 1px solid cyan; padding: 0 0.25em; }
+.red { color: red; }
+.border { border: 2px solid grey; }
+</style>
+#### header {.style-me}
+
+paragraph {data-toggle=modal .style-me} 
+
+paragraph *style me*{.red} more text
+
+```python {.border}
+nums = [x for x in range(10)]
+```
+
+
+## Definition Lists
+
+Provided by [markdown-it-deflist](https://npmjs.org/package/markdown-it-deflist).
+
+```
+Term 1
+
+:   Definition 1
+
+Term 2 with *inline markup*
+
+:   Definition 2
+
+        { some code, part of Definition 2 }
+
+    Third paragraph of definition 2.
+```
+
+
+Term 1
+
+:   Definition 1
+
+Term 2 with *inline markup*
+
+:   Definition 2
+
+        { some code, part of Definition 2 }
+
+    Third paragraph of definition 2.
+
+----
+
+```
+Term 1
+  ~ Definition 1
+
+Term 2
+  ~ Definition 2a
+  ~ Definition 2b
+```
+
+Term 1
+  ~ Definition 1
+
+Term 2
+  ~ Definition 2a
+  ~ Definition 2b
+
+
 ## Emoji
 
-See http://www.webpagefx.com/tools/emoji-cheat-sheet/
+Provided by [markdown-it-emoji](https://npmjs.org/package/markdown-it-emoji).
+See http://www.webpagefx.com/tools/emoji-cheat-sheet/ for supported emojis.
 
 :smile: `:smile:`  
 :blush: `:blush:`  
@@ -503,18 +689,10 @@ See http://www.webpagefx.com/tools/emoji-cheat-sheet/
 :heavy_multiplication_x: `:heavy_multiplication_x:`  
 :heavy_check_mark: `:heavy_check_mark:`  
 
-## Tasklists
-
-```
-- [ ] Open
-- [x] Done
-```
-
-- [ ] Open
-- [x] Done
-
 ## Footnotes
 
+Provided by [markdown-it-footnote](https://npmjs.org/package/markdown-it-footnote).
+
 ```
 Footnote 1 link[^first].
 
@@ -544,6 +722,18 @@ Duplicated footnote reference[^second].
     and multiple paragraphs.
 
 [^second]: Footnote text.
+
+
+## Mark
+
+Provided by [markdown-it-mark](https://npmjs.org/package/markdown-it-mark).
+
+```
+A ==marked== text.
+```
+
+A ==marked== text.
+
 
 ## Math with KaTeX
 
@@ -587,6 +777,7 @@ Provided by [markdown-it-multimd-table](https://github.com/RedBug312/markdown-it
     And more      | With an escaped '\\|'       ||
     [Prototype table]
 
+
 |             |          Grouping           ||
 First Header  | Second Header | Third Header |
  ------------ | :-----------: | -----------: |
@@ -596,6 +787,9 @@ Content       |   **Cell**    |         Cell |
 New section   |     More      |         Data |
 And more      | With an escaped '\\|'       ||
 [Prototype table]
+
+
+----
 
 **Multiline**
 
@@ -609,6 +803,7 @@ And more      | With an escaped '\\|'       ||
     |    .1 + .2   | .1 + .2         \
     |    ```       | ```           |
 
+
 |   Markdown   | Rendered HTML |
 |--------------|---------------|
 |    *Italic*  | *Italic*      | \
@@ -618,6 +813,8 @@ And more      | With an escaped '\\|'       ||
 |    ```python | ```python       \
 |    .1 + .2   | .1 + .2         \
 |    ```       | ```           |
+
+----
 
 **Rowspan**
 
@@ -632,6 +829,7 @@ And more      | With an escaped '\\|'       ||
     **30--32** ATP     |||
     [Net ATP yields per hexose]
 
+
 Stage              | Direct Products | ATP Yields
 -----------------: | --------------: | ---------:
 Glycolysis         | 2 ATP           ||
@@ -642,6 +840,9 @@ Citric acid cycle  | 2 ATP           ||
 ^^                 | 2 FADH2         | 3 ATP |
 **30--32** ATP     |||
 [Net ATP yields per hexose]
+
+
+----
 
 **Headerless**
 
@@ -664,6 +865,39 @@ Citric acid cycle  | 2 ATP           ||
 |  |  |  |  |  |♘ |  |  |
 |♙ |♙ |♙ |♙ |  |♙ |♙ |♙ |
 |♖ |♘ |♗ |♕ |♔ |  |  |♖ |
+
+
+## Subscript
+
+Provided by [markdown-it-sub](https://npmjs.org/package/markdown-it-sub).
+
+    H~2~0
+
+
+H~2~0
+
+
+## Superscript
+
+Provided by [markdown-it-sup](https://npmjs.org/package/markdown-it-sup).
+
+    29^th^
+
+
+29^th^
+
+
+## Tasklists
+
+Provided by [markdown-it-task-lists](https://npmjs.org/package/markdown-it-task-lists).
+
+```
+- [ ] Open
+- [x] Done
+```
+
+- [ ] Open
+- [x] Done
 
 
 # Preprocessor
@@ -691,7 +925,7 @@ This is an included file.
 ---
 <!-- /include -->
 
-<a name="table-of-contents-1">
+<a name="table-of-contents-1"></a>
 
 ## Table of Contents
 
