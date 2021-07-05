@@ -2,6 +2,7 @@
 import 'normalize.css'
 import 'katex/dist/katex.min.css'
 import 'markdown-it-admon/styles/admonition.css'
+import 'confluencer/styles/status.css'
 import '../css/github.css'
 import '../css/screen.css'
 import '../css/print.css'

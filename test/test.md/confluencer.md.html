@@ -7,61 +7,15 @@
     <link rel="stylesheet" media="all" href="/static/highlight/github.css">
   </head>
   <body>
-    <div class="markdown-body">
-<style>
-:root {
-  --radius: 0.25em;
-}
-
-cnfl-status {
-  background: #999999;
-  color: white;
-  padding: var(--radius);
-  border-radius: var(--radius);
-  font-weight: bold;
-}
-cnfl-status[color=Red] { background: #ff0000; }
-cnfl-status[color=Yellow] { background: #ffcc00; color: black; }
-cnfl-status[color=Green] { background: #33ff33; color: black;}
-cnfl-status[color=Blue] { background: #00ccff }
-
-cnfl-note {
-  display: block;
-  background: #fcfcfc;
-  border: 1px solid#ccc;
-  border-radius: 5px;
-  color:#333;
-  margin: 10px 0 1em 0;
-  min-height: 20px;
-  padding: 10px;
-  position: relative;
-}
-cnfl-note[macro=note] {
-  background: #fffdf6;
-  border-color: #ffeaae;
-}
-cnfl-note[macro=note]:before { font-weight: bold; content: "\26a0"; }
-cnfl-note[macro=note][title]:before { font-weight: bold; content: "\26a0" " " attr(title); }
-
-cnfl-note[macro=warning] {
-  background:#fff8f7;
-  border-color:#d04437;
-}
-cnfl-note[macro=warning]:before { font-weight: bold; content: "\26d4"; }
-cnfl-note[macro=warning][title]:before { font-weight: bold; content: "\26d4" " " attr(title); }
-
-cnfl-note[macro=info] {}
-cnfl-note[macro=info]:before { font-weight: bold; content: "\2139"; }
-cnfl-note[macro=info][title]:before { font-weight: bold; content: "\2139" " " attr(title); }
-
-</style>
-<cnfl-note macro="note" title="This is the note title">
+    <div class="markdown-body hljs-github">
+<div class="admonition note">
+<p class="admonition-title">This is the note title</p>
 <p><cnfl-status color="Red">RED</cnfl-status></p>
 <ul>
 <li>Note 1</li>
 <li>And here is some text</li>
 </ul>
-</cnfl-note>
+</div>
 
     </div>
     <script src="/static/index.js"></script>
