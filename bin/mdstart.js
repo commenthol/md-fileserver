@@ -7,6 +7,7 @@ const isPortOpen = require('../lib/checkport')
 const config = require('../config')
 const { filename2uri } = require('../lib/utils')
 const appConfig = require('../lib/appConfig')()
+const { render } = require('../lib/markd')
 
 const argv = () => {
   const argv = process.argv.slice(2)
@@ -26,6 +27,8 @@ const argv = () => {
     } else if (['-c', '--confluence'].includes(arg)) {
       cmd.confluencer = true
       cmd.confluenceHtml = true
+    } else if (['-o', '--output'].includes(arg)) {
+      cmd.output = path.resolve(process.cwd(), argv.shift())
     } else if (['-h', '--help'].includes(arg)) {
       help()
     } else if (['--version'].includes(arg)) {
@@ -43,8 +46,18 @@ isPortOpen(cmd, (isOpen) => {
   const startBrowser = cmd.file && cmd.browser
 
   const token = appConfig.token()
+  const filename = path.resolve(process.cwd(), cmd.file || '')
   const url = `http://${config.hostname}:${cmd.port}` +
-    filename2uri(path.resolve(process.cwd(), cmd.file || '')) + `?session=${token}`
+    filename2uri(filename) + `?session=${token}`
+
+  if (cmd.output) {
+    const _config = Object.assign({}, config, appConfig.config)
+    render(filename, '', _config)
+      .then(data => fs.writeFileSync(cmd.output, data))
+      .catch(console.error)
+
+    return
+  }
 
   if (!isOpen) {
     const { port, confluencer, confluenceHtml } = cmd

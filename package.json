@@ -34,7 +34,7 @@
     "dev": "webpack -w",
     "__postinstall": "semver-dedupe katex@^0.6 markdown-it@^8 highlight.js@^9",
     "lint": "eslint \"**/*.js\"",
-    "man": "ronn -r man/mdstart.md && man man/mdstart.1 > man/mdstart.txt",
+    "man": "marked-man man/mdstart.md > man/mdstart.1 && man man/mdstart.1 > man/mdstart.txt",
     "prepublishOnly": "npm run all",
     "readme": "markedpp --githubid -i README.md -o README.md",
     "test": "mocha",
@@ -101,7 +101,11 @@
     "webpack-cli": "^4.7.2",
     "webpack-dev-server": "^3.11.2"
   },
+  "optionalDependencies": {
+    "marked": "^0.7.0",
+    "marked-man": "^0.7.0"
+  },
   "engine": {
-    "node": ">=8.0.0"
+    "node": ">=10.0.0"
   }
 }

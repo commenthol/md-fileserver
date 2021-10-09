@@ -1,96 +1,121 @@
-.\" generated with Ronn-NG/v0.9.1
-.\" http://github.com/apjanke/ronn-ng/tree/0.9.1
-.TH "MDSTART" "1" "February 2021" ""
+.TH "MDSTART" "1" "October 2021" "" ""
 .SH "NAME"
 \fBmdstart\fR \- Locally view markdown files in a browser
-.SH "SYNOPSIS"
+.SH SYNOPSIS
+.P
+.RS 2
 .nf
 mdstart [options] [<file\.md>]
 .fi
-.SH "DESCRIPTION"
+.RE
+.SH DESCRIPTION
+.P
 Starts a local server to render "markdown" files within your browser:
-.IP "\[ci]" 4
-Runs on \fBlocalhost:4000\fR
-.IP "\[ci]" 4
+.RS 0
+.IP \(bu 2
+Runs on \fBlocalhost:4000\fP
+.IP \(bu 2
 Supports Markdown Syntax \fIhttp://daringfireball\.net/projects/markdown/syntax\fR
 .br
-with GFM \fIhttps://help\.github\.com/articles/github\-flavored\-markdown\fR\.
-.IP "\[ci]" 4
-Markdown rendering based on markdown\-it \fIhttps://github\.com/markdown\-it/markdown\-it\fR\.
-.br
+with GFM \fIhttps://help\.github\.com/articles/github\-flavored\-markdown\fR\|\.
+.IP \(bu 2
+Markdown rendering based on markdown\-it \fIhttps://github\.com/markdown\-it/markdown\-it\fR\|\.   
 Enabled Plugins for: Emojis, Task lists, Footnotes, KaTeX \fIhttps://katex\.org/\fR
-.IP "\[ci]" 4
+.IP \(bu 2
 Includes markedpp \fIhttps://github\.com/commenthol/markedpp\fR as preprocessor\.
-.IP "\[ci]" 4
+.IP \(bu 2
 Supports syntax highlighting using highlight\.js \fIhttp://highlightjs\.org\fR
-.IP "\[ci]" 4
+.IP \(bu 2
 For supported markdown syntax see the Cheatsheet\.
-.IP "\[ci]" 4
+.IP \(bu 2
 Automatic update in browser after saving edited file\. (Tested on Linux, MacOS, Windows)
-.IP "" 0
-.SH "OPTIONS"
-.TP
-\fB\-h\fR, \fB\-\-help\fR
+
+.RE
+.SH OPTIONS
+.RS 0
+.IP \(bu 2
+\fB\-h\fP, \fB\-\-help\fP:
 Display this help and exit\.
-.TP
-\fB\-\-version\fR
+.IP \(bu 2
+\fB\-\-version\fP:
 Output version information and exit\.
-.TP
-\fB\-p\fR, \fB\-\-port\fR \fB<number=4000>\fR
-Change the default port of the server\. Default is 4000\.
-.TP
-\fB\-b\fR, \fB\-\-browser\fR \fB<exe>\fR
+.IP \(bu 2
+\fB\-p\fP, \fB\-\-port\fP \fB<number=4000>\fP:
+Change the default port of the server\.
+Default is 4000\.
+.IP \(bu 2
+\fB\-b\fP, \fB\-\-browser\fP \fB<exe>\fP:
 Use a different browser executable\.
-.TP
-\fB\-c\fR, \fB\-\-confluence\fR
-Generate confluence html\. Copy and paste the rendered output into a editor window at confluence\. Images need manual upload\.
-.SH "EXAMPLES"
+.IP \(bu 2
+\fB\-c\fP, \fB\-\-confluence\fP :
+Generate confluence html\. Copy and paste the rendered output into a editor
+window at confluence\.
+Images need manual upload\.
+.IP \(bu 2
+\fB\-o\fP, \fB\-\-output\fP : 
+Build the given file and output as html\.
+
+.RE
+.SH EXAMPLES
+.P
 Start the server:
-.IP "" 4
+.P
+.RS 2
 .nf
 mdstart
 .fi
-.IP "" 0
+.RE
 .P
 Open a document in the default browser:
-.IP "" 4
+.P
+.RS 2
 .nf
 mdstart README\.md
 .fi
-.IP "" 0
+.RE
 .P
 Open the configuration page:
-.IP "" 4
+.P
+.RS 2
 .nf
 mdstart /config
 .fi
-.IP "" 0
+.RE
 .P
 Open my home directory:
-.IP "" 4
+.P
+.RS 2
 .nf
 mdstart /
 .fi
-.IP "" 0
+.RE
 .P
 Open the cheatsheet:
-.IP "" 4
+.P
+.RS 2
 .nf
 mdstart /cheatsheet
 .fi
-.IP "" 0
+.RE
 .P
 Start with a different browser on port 2000:
-.IP "" 4
+.P
+.RS 2
 .nf
 mdstart \-p 2000 \-b firefox
 .fi
-.IP "" 0
-.SH "INSTALLATION"
+.RE
+.SH INSTALLATION
+.P
+.RS 2
 .nf
 npm i \-g md\-fileserver
 .fi
-.SH "COPYRIGHT"
+.RE
+.SH COPYRIGHT
+.P
 Copyright (c) 2014\- commenthol \- MIT License
-.SH "REPORTING BUGS"
-md\-fileserver repository \fIhttps://github\.com/commenthol/md\-fileserver/issues\fR
+.SH REPORTING BUGS
+.P
+md\-fileserver repository https://github\.com/commenthol/md\-fileserver/issues
+

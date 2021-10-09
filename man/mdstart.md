@@ -38,6 +38,10 @@ Starts a local server to render "markdown" files within your browser:
   window at confluence.
   Images need manual upload.
 
+* `-o`, `--output` : 
+  Build the given file and output as html.
+
+
 ## EXAMPLES
 
 Start the server:
