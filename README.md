@@ -2,7 +2,8 @@
 
 > Locally view markdown files in a browser.
 
-[![NPM version](https://badge.fury.io/js/md-fileserver.svg)](https://www.npmjs.com/package/md-fileserver)
+[![npm version](https://img.shields.io/npm/v/md-fileserver)](https://www.npmjs.com/package/md-fileserver/)
+[![Build Status](https://github.com/commenthol/md-fileserver/workflows/CI/badge.svg?branch=master&event=push)](https://github.com/commenthol/md-fileserver/actions/workflows/ci.yml?query=branch%3Amaster)
 
 Starts a local server to render "markdown" files within your browser:
 
