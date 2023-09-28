@@ -9,6 +9,7 @@ const conf = {
     index: './client/src/index.js'
   },
   output: {
+    // eslint-disable-next-line n/no-path-concat
     path: `${__dirname}/${outDir}`,
     filename: '[name].js'
   },
