@@ -7,3 +7,4 @@
 !/assets/highlight/*
 *.log
 *.tgz
+pnpm-lock.yaml
