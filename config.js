@@ -36,7 +36,7 @@ const config = {
       .use(require('markdown-it-abbr'))
       .use(require('markdown-it-admon'))
       .use(require('markdown-it-attrs'))
-      .use(require('markdown-it-emoji'))
+      .use(require('markdown-it-emoji').full)
       .use(require('markdown-it-deflist'))
       .use(require('markdown-it-footnote'))
       .use(require('markdown-it-highlightjs'), {

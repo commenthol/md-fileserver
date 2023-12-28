@@ -30,34 +30,26 @@ const conf = {
             ]
           }
         }
-      }, {
+      },
+      {
         test: /\.css$/,
         use: [
           { loader: MiniCssExtractPlugin.loader },
           { loader: 'css-loader' }
         ]
-      }, {
+      },
+      {
         test: /\.(png|jpg|gif)$/i,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 8192,
-              name: 'imgs/[name][hash].[ext]'
-            }
-          }
-        ]
+        type: 'asset/resource',
+        generator: {
+          filename: 'imgs/[name][hash][ext]'
+        }
       }, {
         test: /\.(eot|svg|ttf|woff2?)$/i,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 8192,
-              name: 'fonts/[name][hash].[ext]'
-            }
-          }
-        ]
+        type: 'asset/resource',
+        generator: {
+          filename: 'fonts/[name][hash][ext]'
+        }
       }
     ]
   },

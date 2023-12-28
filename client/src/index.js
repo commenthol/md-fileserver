@@ -1,6 +1,6 @@
 // default styles
 import 'normalize.css'
-import 'katex/dist/katex.min.css'
+import 'katex/dist/katex.css'
 import 'markdown-it-admon/styles/admonition.css'
 import 'confluencer/styles/status.css'
 import '../css/github.css'
