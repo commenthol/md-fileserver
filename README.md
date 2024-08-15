@@ -7,36 +7,36 @@
 
 Starts a local server to render "markdown" files within your browser:
 
-* Runs on `localhost:4000`
-* Supports [Markdown Syntax][] with [GFM][].
-* Markdown rendering based on [markdown-it][].   
+- Runs on `localhost:4000`
+- Supports [Markdown Syntax][] with [GFM][].
+- Markdown rendering based on [markdown-it][].  
   Enabled Plugins for:
-  * Emojis
-  * Task lists
-  * Footnotes
-  * [KaTeX][]
-  * [MultiMarkdown table syntax][]
-* Includes [markedpp][] as preprocessor.
-* Supports syntax highlighting using [highlight.js][]
-* For supported markdown syntax see [Cheatsheet][].
-* Automatic update in browser after saving edited file. (Tested on Linux, MacOS, Windows)
-* Support for [confluencer][]. Needs to be enabled in `/config`.
+  - Emojis
+  - Task lists
+  - Footnotes
+  - [KaTeX][]
+  - [MultiMarkdown table syntax][]
+- Includes [markedpp][] as preprocessor.
+- Supports syntax highlighting using [highlight.js][]
+- For supported markdown syntax see [Cheatsheet][].
+- Automatic update in browser after saving edited file. (Tested on Linux, MacOS, Windows)
+- Support for [confluencer][]. Needs to be enabled in `/config`.
 
 ## Table of Contents
 
 <!-- !toc (minlevel=2 omit="Table of Contents") -->
 
-* [Installation](#installation)
-* [Usage](#usage)
-  * [Start the Local Server](#start-the-local-server)
-  * [Open a markdown file](#open-a-markdown-file)
-* [Configuration](#configuration)
-* [Help](#help)
-* [Cheatsheet](#cheatsheet)
-* [Personalisation](#personalisation)
-* [Contribution](#contribution)
-* [License](#license)
-* [References](#references)
+- [Installation](#installation)
+- [Usage](#usage)
+  - [Start the Local Server](#start-the-local-server)
+  - [Open a markdown file](#open-a-markdown-file)
+- [Configuration](#configuration)
+- [Help](#help)
+- [Cheatsheet](#cheatsheet)
+- [Personalisation](#personalisation)
+- [Contribution](#contribution)
+- [License](#license)
+- [References](#references)
 
 <!-- toc! -->
 
@@ -59,7 +59,7 @@ mdstart
 Open the given link <http://localhost:4000/?session=...> in your browser and
 navigate to the markdown file.
 
-__Note__: The local server can only be reached from your local computer on port 4000.
+**Note**: The local server can only be reached from your local computer on port 4000.
 Any remote access from other computers to your files is denied.
 An internal session is used, so you'll need to either start with a file or use the provided
 link with the session parameter.
@@ -87,7 +87,9 @@ mdstart /config
 ```
 mdstart --help
 ```
+
 or
+
 ```
 man mdstart
 ```
@@ -104,17 +106,18 @@ mdstart /cheatsheet
 
 In `config.js` you can change several settings to fit your needs. These include:
 
-* **Browser**: Default browser of MacOS, Linux or Windows is used.
-* **Markdown** options: Change the options how [markdown-it][] processes your markdown files.
-* **Markdown PP** options: Change the options how [markedpp][] pre-processes your markdown files.
+- **Browser**: Default browser of MacOS, Linux or Windows is used.
+- **Markdown** options: Change the options how [markdown-it][] processes your markdown files.
+- **Markdown PP** options: Change the options how [markedpp][] pre-processes your markdown files.
 
 Install personalized version:
 
 1. Clone this repo
-   ````
+
+   ```
    git clone --depth 2 https://github.com/commenthol/md-fileserver.git
    cd md-fileserver
-   ````
+   ```
 
 2. Make your changes in `./config.js`
 3. Install with `npm i -g` from same folder.  
@@ -128,7 +131,7 @@ all code is your original work.
 
 ## License
 
-Copyright (c) 2014-present commenthol   
+Copyright (c) 2014-present commenthol  
 Software is released under [MIT License][].
 
 Bundled fonts from [KaTeX][] by Khan Academy - https://github.com/Khan/KaTeX -
@@ -138,16 +141,16 @@ Bundled fonts from [KaTeX][] by Khan Academy - https://github.com/Khan/KaTeX -
 
 <!-- !ref -->
 
-* [Cheatsheet][Cheatsheet]
-* [confluencer][confluencer]
-* [GFM][GFM]
-* [highlight.js][highlight.js]
-* [KaTeX][KaTeX]
-* [Markdown Syntax][Markdown Syntax]
-* [markdown-it][markdown-it]
-* [markedpp][markedpp]
-* [MIT License][MIT License]
-* [MultiMarkdown table syntax][MultiMarkdown table syntax]
+- [Cheatsheet][Cheatsheet]
+- [confluencer][confluencer]
+- [GFM][GFM]
+- [highlight.js][highlight.js]
+- [KaTeX][KaTeX]
+- [Markdown Syntax][Markdown Syntax]
+- [markdown-it][markdown-it]
+- [markedpp][markedpp]
+- [MIT License][MIT License]
+- [MultiMarkdown table syntax][MultiMarkdown table syntax]
 
 <!-- ref! -->
 

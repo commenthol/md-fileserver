@@ -34,7 +34,7 @@ input:not([type=checkbox]) {
 
 <a href="/">home</a>
 
-----
+---
 
 <form method="post" action="/config">
 

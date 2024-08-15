@@ -1,7 +1,9 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 body {
@@ -16,8 +18,9 @@ body {
 img {
   max-width: 100%;
 }
-a, a:active {
-  color:#0366d6;
+a,
+a:active {
+  color: #0366d6;
   text-decoration: none;
 }
 a[name] {
@@ -47,10 +50,12 @@ kbd {
   background-color: #eee;
   border-radius: 3px;
   border: 1px solid #b4b4b4;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, .2), 0 2px 0 0 rgba(255, 255, 255, .7) inset;
+  box-shadow:
+    0 1px 1px rgba(0, 0, 0, 0.2),
+    0 2px 0 0 rgba(255, 255, 255, 0.7) inset;
   color: #333;
   display: inline-block;
-  font-size: .85em;
+  font-size: 0.85em;
   font-weight: 700;
   line-height: 1;
   padding: 2px 4px;
@@ -70,5 +75,5 @@ x-note {
   display: block;
   padding: 0.5em;
   background-color: #ff6;
-  box-shadow: 0px 0px 5px 2px #ff0
+  box-shadow: 0px 0px 5px 2px #ff0;
 }

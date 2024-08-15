@@ -1,16 +1,16 @@
 import Interval from './Interval'
 
 /**
- * handler for connection, dispatcher and master-slave
+ * handler for connection, dispatcher and primary-follower
  * @class
  * @private
  */
 class Handler {
-  constructor () {
+  constructor() {
     this.isReestablishing = false
-    this._isSlave = true
+    this._isFollower = true
     this.interval = new Interval(() => {
-      if (!this._isSlave) this.send({ slave: true })
+      if (!this._isFollower) this.send({ follower: true })
     }, 1000)
     this.interval.set()
   }
@@ -18,52 +18,53 @@ class Handler {
   /**
    * @param {WebSocket} conn - socket connection
    */
-  set connection (conn) {
+  set connection(conn) {
     this._conn = conn
   }
 
-  get connection () {
+  get connection() {
     return this._conn
   }
 
   /**
    * @param {Dispatcher} dispatch
    */
-  set dispatcher (dispatch) {
+  set dispatcher(dispatch) {
     this._dispatch = dispatch
   }
 
-  get dispatcher () {
+  get dispatcher() {
     return this._dispatch
   }
 
   /**
    * @param {Boolean} isRx
    */
-  set isSlave (isRx) {
-    this._isSlave = isRx
+  set isFollower(isRx) {
+    this._isFollower = isRx
     this.dispatch({ isRx })
-    // const el = document.getElementById('master')
     const el = document.documentElement
-    if (!isRx) { // master mode
-      el.classList.remove('slave')
-      this.send({ slave: true })
-    } else { // slave mode
-      el.classList.add('slave')
+    if (!isRx) {
+      // primary mode
+      el.classList.remove('follower')
+      this.send({ follower: true })
+    } else {
+      // follower mode
+      el.classList.add('follower')
     }
   }
 
   /**
    * @returns {Boolean}
    */
-  get isSlave () {
-    return this._isSlave
+  get isFollower() {
+    return this._isFollower
   }
 
   /**
    * @param {Object} msg
    */
-  dispatch (msg) {
+  dispatch(msg) {
     const { _dispatch } = this
     if (_dispatch) _dispatch.dispatch(msg)
   }
@@ -71,14 +72,14 @@ class Handler {
   /**
    * @param {Object} msg
    */
-  send (msg) {
+  send(msg) {
     const { _conn } = this
     if (_conn && _conn.readyState === _conn.OPEN) {
       _conn.send(JSON.stringify(msg))
     }
   }
 
-  close () {
+  close() {
     const { _conn } = this
     this.interval.clear()
     if (_conn) {
@@ -86,7 +87,7 @@ class Handler {
     }
   }
 
-  sendScroll () {
+  sendScroll() {
     const top = window.scrollY / document.body.clientHeight
     const left = window.scrollX / document.body.clientWidth
     const scroll = { top, left }
@@ -101,7 +102,7 @@ const handler = new Handler()
  * @param {String} msg - message
  * @return {Object} object
  */
-function parse (msg) {
+function parse(msg) {
   try {
     return JSON.parse(msg)
   } catch (e) {
@@ -114,7 +115,7 @@ function parse (msg) {
  * @private
  * @param {Object} arg
  */
-function recreateConnection (arg) {
+function recreateConnection(arg) {
   handler.isReestablishing = true
   setTimeout(() => {
     createConnection(arg)
@@ -125,7 +126,7 @@ function recreateConnection (arg) {
  * creates a websocket connection
  * @param {Object} arg
  */
-export function createConnection () {
+export function createConnection() {
   const WebSocket = window.WebSocket || window.MozWebSocket
   if (!WebSocket) {
     console.error('there is no WebSocket...')
@@ -161,7 +162,7 @@ export function createConnection () {
   }
 
   return {
-    send: (msg) => !handler.isSlave && handler.send(msg)
+    send: (msg) => !handler.isFollower && handler.send(msg)
   }
 }
 

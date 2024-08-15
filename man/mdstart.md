@@ -8,39 +8,38 @@
 
 Starts a local server to render "markdown" files within your browser:
 
-* Runs on `localhost:4000`
-* Supports [Markdown Syntax][]  
+- Runs on `localhost:4000`
+- Supports [Markdown Syntax][]  
   with [GFM][].
-* Markdown rendering based on [markdown-it][].   
+- Markdown rendering based on [markdown-it][].  
   Enabled Plugins for: Emojis, Task lists, Footnotes, [KaTeX][]
-* Includes [markedpp][] as preprocessor.
-* Supports syntax highlighting using [highlight.js][]
-* For supported markdown syntax see the Cheatsheet.
-* Automatic update in browser after saving edited file. (Tested on Linux, MacOS, Windows)
+- Includes [markedpp][] as preprocessor.
+- Supports syntax highlighting using [highlight.js][]
+- For supported markdown syntax see the Cheatsheet.
+- Automatic update in browser after saving edited file. (Tested on Linux, MacOS, Windows)
 
 ## OPTIONS
 
-* `-h`, `--help`:
+- `-h`, `--help`:
   Display this help and exit.
 
-* `--version`:
+- `--version`:
   Output version information and exit.
 
-* `-p`, `--port` `<number=4000>`:
+- `-p`, `--port` `<number=4000>`:
   Change the default port of the server.
   Default is 4000.
 
-* `-b`, `--browser` `<exe>`:
+- `-b`, `--browser` `<exe>`:
   Use a different browser executable.
 
-* `-c`, `--confluence` :
+- `-c`, `--confluence` :
   Generate confluence html. Copy and paste the rendered output into a editor
   window at confluence.
   Images need manual upload.
 
-* `-o`, `--output` : 
+- `-o`, `--output` :
   Build the given file and output as html.
-
 
 ## EXAMPLES
 

@@ -11,13 +11,17 @@ const { render } = require('../lib/markd')
 
 const argv = () => {
   const argv = process.argv.slice(2)
-  const cmd = Object.assign({
-    browser: config.browser[process.platform],
-    port: config.port
-  }, appConfig.config, {
-    confluencer: undefined,
-    confluenceHtml: undefined
-  })
+  const cmd = Object.assign(
+    {
+      browser: config.browser[process.platform],
+      port: config.port
+    },
+    appConfig.config,
+    {
+      confluencer: undefined,
+      confluenceHtml: undefined
+    }
+  )
   while (argv.length) {
     const arg = argv.shift()
     if (['-p', '--port'].includes(arg)) {
@@ -47,13 +51,15 @@ isPortOpen(cmd, (isOpen) => {
 
   const token = appConfig.token()
   const filename = path.resolve(process.cwd(), cmd.file || '')
-  const url = `http://${config.hostname}:${cmd.port}` +
-    filename2uri(filename) + `?session=${token}`
+  const url =
+    `http://${config.hostname}:${cmd.port}` +
+    filename2uri(filename) +
+    `?session=${token}`
 
   if (cmd.output) {
     const _config = Object.assign({}, config, appConfig.config)
     render(filename, '', _config)
-      .then(data => fs.writeFileSync(cmd.output, data))
+      .then((data) => fs.writeFileSync(cmd.output, data))
       .catch(console.error)
 
     return
@@ -61,39 +67,47 @@ isPortOpen(cmd, (isOpen) => {
 
   if (!isOpen) {
     const { port, confluencer, confluenceHtml } = cmd
-    require('../lib').start({ port, confluencer, confluenceHtml, quiet: startBrowser })
+    require('../lib').start({
+      port,
+      confluencer,
+      confluenceHtml,
+      quiet: startBrowser
+    })
     // child.execFile('node', [path.resolve(__dirname, 'start.js')],
     //   isWin32 ? { windowsHide: true, shell: true } : void 0)
   }
 
   if (startBrowser) {
-    setTimeout(function () {
-      const [exe, ...args] = cmd.browser
-      args.push(url)
-      const www = child.spawn(exe, args)
-      www.on('error', (err) => {
-        if (err.code === 'ENOENT') {
-          console.log('\n' +
-            `    Error: Starting browser with "${exe}" failed.\n` +
-            `    Open: ${url}\n`
-          )
-        }
-      })
-    }, isOpen ? 0 : 250)
+    setTimeout(
+      function () {
+        const [exe, ...args] = cmd.browser
+        args.push(url)
+        const www = child.spawn(exe, args)
+        www.on('error', (err) => {
+          if (err.code === 'ENOENT') {
+            console.log(
+              '\n' +
+                `    Error: Starting browser with "${exe}" failed.\n` +
+                `    Open: ${url}\n`
+            )
+          }
+        })
+      },
+      isOpen ? 0 : 250
+    )
   } else {
-    console.log('\n' +
-      `    Open: ${url}\n`)
+    console.log('\n' + `    Open: ${url}\n`)
   }
 })
 
-/* eslint-disable no-console */
-
-function version () {
+function version() {
   console.log('v' + require('../package.json').version)
   process.exit(0)
 }
 
-function help () {
-  console.log(fs.readFileSync(path.resolve(__dirname, '..', 'man', 'mdstart.txt'), 'utf8'))
+function help() {
+  console.log(
+    fs.readFileSync(path.resolve(__dirname, '..', 'man', 'mdstart.txt'), 'utf8')
+  )
   process.exit(0)
 }

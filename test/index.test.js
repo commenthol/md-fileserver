@@ -14,7 +14,8 @@ describe('md-fileserver', function () {
     const token = appConfig.token()
     assert.ok(token, `got token ${token}`)
     agent = request.agent(setupApp())
-    return agent.get(`/?session=${token}`)
+    return agent
+      .get(`/?session=${token}`)
       .expect('set-cookie', new RegExp(`session=${token};`))
   })
 
@@ -38,7 +39,7 @@ describe('md-fileserver', function () {
     })
 
     it('should load files with non-ascii chars', function () {
-    // this may fail if confluence is configured
+      // this may fail if confluence is configured
       return agent
         .get(filename2uri(resolve(__dirname, 'test.md', 'råndÖm.md')))
         .expect('content-type', 'text/html; charset=utf-8')
@@ -67,10 +68,7 @@ describe('md-fileserver', function () {
     })
 
     it('should redirect to homedir', function () {
-      return agent
-        .get('/')
-        .expect('location', homedir())
-        .expect(302)
+      return agent.get('/').expect('location', homedir()).expect(302)
     })
 
     it('should load image', function () {
@@ -173,7 +171,7 @@ describe('md-fileserver', function () {
 
     it('should reject remote connection', function () {
       const ips = Object.values(os.networkInterfaces()).reduce((a, c) => {
-        c.forEach(i => {
+        c.forEach((i) => {
           if (!i.internal && i.family === 'IPv4') a.push(i.address)
         })
         return a
@@ -182,7 +180,7 @@ describe('md-fileserver', function () {
       const url = `http://${ips[0]}:${port}`
       return request(url)
         .get(filename2uri(resolve(__dirname, 'cheatsheet.md')))
-        .catch(err => {
+        .catch((err) => {
           assert.strictEqual(err.code, 'ECONNRESET')
         })
     })

@@ -42,9 +42,13 @@ const config = {
       .use(require('markdown-it-highlightjs'), {
         auto: false,
         register: {
-          plantuml: (hljs) => ({
+          plantuml: () => ({
             name: 'plantuml',
-            aliases: ['!plantuml', '!plantuml(format=svg)', '!plantuml(format=png)'],
+            aliases: [
+              '!plantuml',
+              '!plantuml(format=svg)',
+              '!plantuml(format=png)'
+            ],
             keywords: [],
             contains: []
           })

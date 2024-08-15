@@ -9,14 +9,14 @@ export default class Interval {
    * @param {Object} [opts]
    * @param {Boolean} [opts.runOnInit=false] - run `fn` on init
    */
-  constructor (fn, timeout, opts) {
+  constructor(fn, timeout, opts) {
     const { runOnInit = false } = opts || {}
     Object.assign(this, { fn, timeout })
     this.set()
     runOnInit && fn()
   }
 
-  set () {
+  set() {
     const { fn, timeout } = this
     this._timer = setTimeout(() => {
       this.set() // restart timer
@@ -24,7 +24,7 @@ export default class Interval {
     }, timeout)
   }
 
-  clear () {
+  clear() {
     clearTimeout(this._timer)
   }
 }

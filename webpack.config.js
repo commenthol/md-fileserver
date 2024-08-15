@@ -9,7 +9,6 @@ const conf = {
     index: './client/src/index.js'
   },
   output: {
-    // eslint-disable-next-line n/no-path-concat
     path: `${__dirname}/${outDir}`,
     filename: '[name].js'
   },
@@ -33,10 +32,7 @@ const conf = {
       },
       {
         test: /\.css$/,
-        use: [
-          { loader: MiniCssExtractPlugin.loader },
-          { loader: 'css-loader' }
-        ]
+        use: [{ loader: MiniCssExtractPlugin.loader }, { loader: 'css-loader' }]
       },
       {
         test: /\.(png|jpg|gif)$/i,
@@ -44,7 +40,8 @@ const conf = {
         generator: {
           filename: 'imgs/[name][hash][ext]'
         }
-      }, {
+      },
+      {
         test: /\.(eot|svg|ttf|woff2?)$/i,
         type: 'asset/resource',
         generator: {
