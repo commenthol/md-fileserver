@@ -181,7 +181,7 @@ describe('md-fileserver', function () {
       return request(url)
         .get(filename2uri(resolve(__dirname, 'cheatsheet.md')))
         .catch((err) => {
-          assert.strictEqual(err.code, 'ECONNRESET')
+          assert.strictEqual(err.message.startsWith('ECONNRESET'), true)
         })
     })
   })
