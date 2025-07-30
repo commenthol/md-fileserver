@@ -120,7 +120,8 @@ Install personalized version:
    ```
 
 2. Make your changes in `./config.js`
-3. Install with `npm i -g` from same folder.  
+3. Run the build command so all assets are created `npm run build`.
+4. Install with `npm i -g` from same folder.  
    If there are issues with installing you'll need to uninstall first with `npm un -g`
 
 ## Contribution
