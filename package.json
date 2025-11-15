@@ -1,6 +1,6 @@
 {
   "name": "md-fileserver",
-  "version": "1.10.2",
+  "version": "1.10.3-0",
   "description": "Locally view markdown files in a browser",
   "keywords": [
     "fileserver",
@@ -45,7 +45,8 @@
     "readme": "markedpp --githubid -i README.md -o README.md",
     "test": "mocha",
     "test:md": "bin/mdstart.js test/cheatsheet.md",
-    "test:cnfl": "bin/mdstart.js test/cnfl.md"
+    "test:cnfl": "bin/mdstart.js test/cnfl.md",
+    "test:exf": "bin/mdstart.js test/exfiltrate.md"
   },
   "mocha": {
     "exit": true
