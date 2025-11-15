@@ -1,6 +1,6 @@
 {
   "name": "md-fileserver",
-  "version": "1.10.3-0",
+  "version": "1.10.3",
   "description": "Locally view markdown files in a browser",
   "keywords": [
     "fileserver",
