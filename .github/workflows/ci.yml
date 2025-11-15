@@ -9,14 +9,14 @@ on:
     branches: []
 
 env:
-  CI: "true"
+  CI: 'true'
 
 jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: [ 20, 22 ]
+        node: [24]
     name: Node ${{ matrix.node }}
     steps:
       - uses: actions/checkout@v4
@@ -27,4 +27,3 @@ jobs:
       - run: npm version
       - run: npm install --ignore-scripts
       - run: npm run ci
-
