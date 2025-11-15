@@ -1,6 +1,6 @@
 {
   "name": "md-fileserver",
-  "version": "1.10.2",
+  "version": "1.10.3-0",
   "description": "Locally view markdown files in a browser",
   "keywords": [
     "fileserver",
@@ -45,15 +45,16 @@
     "readme": "markedpp --githubid -i README.md -o README.md",
     "test": "mocha",
     "test:md": "bin/mdstart.js test/cheatsheet.md",
-    "test:cnfl": "bin/mdstart.js test/cnfl.md"
+    "test:cnfl": "bin/mdstart.js test/cnfl.md",
+    "test:exf": "bin/mdstart.js test/exfiltrate.md"
   },
   "mocha": {
     "exit": true
   },
   "dependencies": {
     "@commenthol/markdown-it-katex": "^2.0.8",
-    "asyncc": "^2.0.7",
-    "body-parser": "^1.20.3",
+    "asyncc": "^2.0.9",
+    "body-parser": "^2.2.0",
     "confluencer": "^1.5.2",
     "cookie": "^1.0.2",
     "express": "^4.21.2",
@@ -63,7 +64,7 @@
     "markdown-it-abbr": "^2.0.0",
     "markdown-it-admon": "^1.0.1",
     "markdown-it-anchor": "^9.2.0",
-    "markdown-it-attrs": "~4.2.0",
+    "markdown-it-attrs": "4.2.0",
     "markdown-it-deflist": "^3.0.0",
     "markdown-it-emoji": "^3.0.0",
     "markdown-it-footnote": "^4.0.0",
@@ -73,37 +74,40 @@
     "markdown-it-sub": "^2.0.0",
     "markdown-it-sup": "^2.0.0",
     "markdown-it-task-lists": "^2.1.1",
-    "markedpp": "^1.4.0",
+    "markedpp": "^2.0.3",
     "serve-index": "^1.9.1",
-    "serve-static": "^1.16.2",
-    "ws": "^8.18.0"
+    "serve-static": "^2.2.0",
+    "ws": "^8.18.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.26.0",
+    "@babel/core": "^7.28.5",
     "@babel/plugin-proposal-class-properties": "^7.18.6",
-    "@babel/plugin-transform-react-jsx": "^7.25.9",
-    "@babel/preset-env": "^7.26.0",
-    "@babel/register": "^7.25.9",
+    "@babel/plugin-transform-react-jsx": "^7.27.1",
+    "@babel/preset-env": "^7.28.5",
+    "@babel/register": "^7.28.3",
     "babel-eslint": "^10.1.0",
-    "babel-loader": "^9.2.1",
+    "babel-loader": "^10.0.0",
     "css-loader": "^7.1.2",
-    "eslint": "^9.17.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-prettier": "^5.2.1",
-    "globals": "^15.14.0",
-    "katex": "^0.16.19",
-    "mini-css-extract-plugin": "^2.9.2",
-    "mocha": "^11.0.1",
+    "eslint": "^9.39.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "globals": "^16.5.0",
+    "katex": "^0.16.25",
+    "mini-css-extract-plugin": "^2.9.4",
+    "mocha": "^11.7.5",
     "normalize.css": "^8.0.1",
-    "npm-run-all2": "^7.0.2",
-    "rimraf": "^6.0.1",
+    "npm-run-all2": "^8.0.4",
+    "rimraf": "^6.1.0",
     "style-loader": "^4.0.0",
-    "supertest": "^7.0.0",
-    "webpack": "^5.97.1",
+    "supertest": "^7.1.4",
+    "webpack": "^5.102.1",
     "webpack-cli": "^6.0.1",
-    "webpack-dev-server": "^5.2.0"
+    "webpack-dev-server": "^5.2.2"
   },
   "engine": {
     "node": ">=10.0.0"
+  },
+  "c4uIgnore": {
+    "markdown-it-attrs": "4.2.0"
   }
 }

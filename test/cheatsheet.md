@@ -392,12 +392,12 @@ img[alt=img100x] {width: 100px; border: 5px solid red; border-radius: 25%}
 
     ![Alt Text](path_to/img.png)
     ![Alt Text](path_to/img.png "Optional Title")
-    ![Alt Text](http://placehold.it/150x100)
+    ![Alt Text](https://picsum.photos/200/200)
     ![broken image](http://localhost/my-broken-image)
 
 ![Alt Text](path_to/img.png)
-![Alt Text](path_to/img.png "Optional Title")
-![Alt Text](http://placehold.it/150x100)
+![Alt Text](path_to/img.png 'Optional Title')
+![Alt Text](https://picsum.photos/200/200)
 ![broken image](http://localhost/my-broken-image)
 
 Using plain html can be used to size images:
