@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html<%= darkMode ? ' data-theme="dark"' : '' %>>
   <head>
     <meta charset="utf-8">
     <meta name="google" content="notranslate">
+    <meta name="color-scheme" content="<%= darkMode ? 'dark' : 'light' %>">
     <title><%= title %></title>
     <link rel="stylesheet" media="all" href="/static/index.css">
     <link rel="stylesheet" media="all" href="/static/highlight/<%= highlight %>.css">
