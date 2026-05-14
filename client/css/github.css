@@ -8,11 +8,30 @@
 :root {
   --color-fg-primary: #000;
   --color-fg-secondary: #333;
+  --color-bg-primary: #fff;
   --color-bg-tertiary: #f6f7f8;
   --color-fg-absent: #cc0000;
   --color-fg-h6: #777;
   --color-border-h1: #ddd;
   --color-border-h2: #eee;
+  --color-border-primary: #d1d5da;
+  --color-text-primary: #24292e;
+  --color-link: #0366d6;
+}
+
+/* Dark mode */
+[data-theme="dark"] {
+  --color-fg-primary: #c9d1d9;
+  --color-fg-secondary: #b1bac4;
+  --color-bg-primary: #0d1117;
+  --color-bg-tertiary: #161b22;
+  --color-fg-absent: #f85149;
+  --color-fg-h6: #8b949e;
+  --color-border-h1: #30363d;
+  --color-border-h2: #21262d;
+  --color-border-primary: #30363d;
+  --color-text-primary: #c9d1d9;
+  --color-link: #58a6ff;
 }
 
 .markdown-body {
@@ -233,7 +252,7 @@
 
 .markdown-body table tr {
   border-top: 1px solid var(--color-border-h1);
-  background-color: #fff;
+  background-color: var(--color-bg-primary, #fff);
 }
 
 .markdown-body table th {

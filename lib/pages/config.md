@@ -23,12 +23,15 @@ input:not([type=checkbox]) {
   padding: .375rem .75rem;
   font-size: 1rem;
   font-weight: 400;
-  color: #495057;
-  background-color: #fff;
+  color: var(--color-fg-secondary, #495057);
+  background-color: var(--color-bg-primary, #fff);
   background-clip: padding-box;
-  border: 1px solid #ced4da;
+  border: 1px solid var(--color-border-h1, #ced4da);
   border-radius: .25rem;
   transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+label {
+  color: var(--color-fg-primary, inherit);
 }
 </style>
 
@@ -51,6 +54,10 @@ input:not([type=checkbox]) {
 
 <input id="confluenceHtml" name="confluenceHtml" type="checkbox" <%= confluenceHtml ? 'checked' : '' %>>
 <label for="confluenceHtml">Display Confluence html</label>
+<br>
+
+<input id="darkMode" name="darkMode" type="checkbox" <%= darkMode ? 'checked' : '' %>>
+<label for="darkMode">Dark mode</label>
 <br>
 
 <label for="style">highlight.js style</label>

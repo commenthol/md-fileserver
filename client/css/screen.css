@@ -9,18 +9,20 @@ html {
 body {
   max-width: 900px;
   margin: 0 auto;
-  background: #fff;
+  background: var(--color-bg-primary, #fff);
+  color: var(--color-text-primary, #24292e);
   padding: 1em 4em;
-  border-right: 1px solid #d1d5da;
-  border-left: 1px solid #d1d5da;
+  border-right: 1px solid var(--color-border-primary, #d1d5da);
+  border-left: 1px solid var(--color-border-primary, #d1d5da);
   min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 img {
   max-width: 100%;
 }
 a,
 a:active {
-  color: #0366d6;
+  color: var(--color-link, #0366d6);
   text-decoration: none;
 }
 a[name] {
@@ -47,19 +49,25 @@ a.top {
 }
 
 kbd {
-  background-color: #eee;
+  background-color: var(--color-bg-tertiary, #eee);
   border-radius: 3px;
-  border: 1px solid #b4b4b4;
+  border: 1px solid var(--color-border-h1, #b4b4b4);
   box-shadow:
     0 1px 1px rgba(0, 0, 0, 0.2),
     0 2px 0 0 rgba(255, 255, 255, 0.7) inset;
-  color: #333;
+  color: var(--color-fg-secondary, #333);
   display: inline-block;
   font-size: 0.85em;
   font-weight: 700;
   line-height: 1;
   padding: 2px 4px;
   white-space: nowrap;
+}
+
+[data-theme="dark"] kbd {
+  box-shadow:
+    0 1px 1px rgba(0, 0, 0, 0.4),
+    0 2px 0 0 rgba(255, 255, 255, 0.1) inset;
 }
 
 x-error {

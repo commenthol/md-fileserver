@@ -30,6 +30,7 @@ const config = {
   },
   confluencer: false, // disable confluencer by default
   confluenceHtml: false, // use confluence html if enabled
+  darkMode: false, // disable dark mode by default
   /// add `markdown-it` plugins
   markdownItPlugins: function (parser) {
     return parser
