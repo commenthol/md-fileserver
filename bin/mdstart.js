@@ -65,9 +65,10 @@ isPortOpen(cmd, (isOpen) => {
     return
   }
 
+  let server
   if (!isOpen) {
     const { port, confluencer, confluenceHtml } = cmd
-    require('../lib').start({
+    server = require('../lib').start({
       port,
       confluencer,
       confluenceHtml,
@@ -77,24 +78,47 @@ isPortOpen(cmd, (isOpen) => {
     //   isWin32 ? { windowsHide: true, shell: true } : void 0)
   }
 
-  if (startBrowser) {
-    setTimeout(
-      function () {
-        const [exe, ...args] = cmd.browser
-        args.push(url)
-        const www = child.spawn(exe, args)
-        www.on('error', (err) => {
-          if (err.code === 'ENOENT') {
-            console.log(
-              '\n' +
-                `    Error: Starting browser with "${exe}" failed.\n` +
-                `    Open: ${url}\n`
-            )
-          }
-        })
-      },
-      isOpen ? 0 : 250
+  const reportBrowserError = (exe, err) => {
+    if (err.code !== 'ENOENT' && err.code !== 127) return
+    console.log(
+      '\n' +
+        `    Error: Starting browser with "${exe}" failed.\n` +
+        `    Open: ${url}\n`
     )
+  }
+
+  const shellQuote = (value) => `'${value.replace(/'/g, "'\\''")}'`
+
+  const openBrowser = () => {
+    const [exe, ...args] = cmd.browser
+    args.push(url)
+
+    // Termux's xdg-open is a shell command which hands the URL to an Android
+    // app. Run it through the shell rather than detaching a direct spawn so it
+    // gets the same shell environment as an invocation from the terminal.
+    if (process.platform === 'android' && exe === 'xdg-open') {
+      const command = [exe, ...args].map(shellQuote).join(' ')
+      child.exec(command, (err) => {
+        if (err) reportBrowserError(exe, err)
+      })
+      return
+    }
+
+    const www = child.spawn(exe, args, {
+      detached: true,
+      stdio: 'ignore'
+    })
+    www.on('error', (err) => reportBrowserError(exe, err))
+    www.unref()
+  }
+
+  if (startBrowser) {
+    if (server && !server.listening) {
+      // Wait until the URL is reachable instead of relying on a fixed delay.
+      server.once('listening', openBrowser)
+    } else {
+      openBrowser()
+    }
   } else {
     console.log('\n' + `    Open: ${url}\n`)
   }

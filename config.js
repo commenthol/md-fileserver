@@ -8,8 +8,9 @@ const config = {
   port: 4000,
   /// browser settings per platform
   browser: {
+    android: ['xdg-open'],
     darwin: ['open'],
-    linux: ['x-www-browser'], // Default browser use `sudo update-alternatives --config x-www-browser` to change
+    linux: ['xdg-open'], // Open using the desktop environment's default browser
     win32: ['cmd.exe', '/C', 'start']
   },
   /// show only markdown files in browser folder view
