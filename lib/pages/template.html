@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="google" content="notranslate">
-    <meta name="color-scheme" content="<%= darkMode ? 'dark' : 'light' %>">
-    <title><%= title %></title>
+    <meta name="color-scheme" content="<%- darkMode ? 'dark' : 'light' %>">
+    <title><%- title %></title>
     <link rel="stylesheet" media="all" href="/static/index.css">
-    <link rel="stylesheet" media="all" href="/static/highlight/<%= highlight %>.css">
+    <link rel="stylesheet" media="all" href="/static/highlight/<%- highlight %>.css">
   </head>
   <body>
-    <div class="markdown-body hljs-<%= highlight %>">
+    <div class="markdown-body hljs-<%- highlight %>">
 <%= markdown %>
     </div>
     <script src="/static/index.js"></script>
