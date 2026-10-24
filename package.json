@@ -1,6 +1,6 @@
 {
   "name": "md-fileserver",
-  "version": "1.11.1",
+  "version": "1.11.2",
   "description": "Locally view markdown files in a browser",
   "keywords": [
     "fileserver",
@@ -50,7 +50,7 @@
   },
   "mocha": {
     "exit": true,
-    "timeout": 2e3
+    "timeout": 2000
   },
   "dependencies": {
     "@commenthol/markdown-it-katex": "^2.0.8",
