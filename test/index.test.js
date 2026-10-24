@@ -14,9 +14,9 @@ describe('md-fileserver', function () {
     const token = appConfig.token()
     assert.ok(token, `got token ${token}`)
     agent = request.agent(setupApp())
-    return agent
-      .get(`/?session=${token}`)
-      .expect('set-cookie', new RegExp(`session=${token};`))
+    return agent.get(`/?session=${token}`).expect(function (res) {
+      assert.equal(res.headers?.['set-cookie']?.[0], `session=${token}`)
+    })
   })
 
   context('general', function () {
